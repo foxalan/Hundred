@@ -2,13 +2,10 @@ package com.example.alan.hundred.activity.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
-import android.view.Window;
 import android.widget.ProgressBar;
 
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
-import com.example.alan.hundred.fragment.BaseSupportFragment;
 import com.example.alan.hundred.util.L;
 
 /**

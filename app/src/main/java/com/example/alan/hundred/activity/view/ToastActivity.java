@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 
-import com.example.alan.hundred.MainActivity;
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
 import com.example.alan.hundred.util.NotificationUtil;

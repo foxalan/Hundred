@@ -3,21 +3,18 @@ package com.example.alan.hundred.activity.intent;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
-import com.example.alan.hundred.activity.view.TextActivity;
 import com.example.alan.hundred.util.L;
 
 import java.io.File;
