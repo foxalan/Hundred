@@ -7,7 +7,7 @@ import com.example.alan.hundred.view.MyToast;
 
 /**
  * Function :
- * @Author : Alan
+ * Author : Alan
  * Modify Date : 25/9/17
  * Issue : TODO
  * Whether solve :

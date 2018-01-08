@@ -16,7 +16,8 @@ import butterknife.Unbinder;
  * Whether Solve :
  */
 
- public abstract class RxBaseActivity extends AppCompatActivity {
+public abstract class RxBaseActivity extends AppCompatActivity {
+
 
     /**
      * 得到当前的Layout
@@ -31,6 +32,11 @@ import butterknife.Unbinder;
     public abstract void initToolBar();
 
     /**
+     *
+     * @param savedInstanceState
+     */
+
+    /**
      * 初始化事件
      */
     public abstract void initEvent();
@@ -43,9 +49,9 @@ import butterknife.Unbinder;
 
         initWindow();
         setContentView(getLayoutId());
+        initToolBar();
         unbinder = ButterKnife.bind(this);
         initView();
-        initToolBar();
         initEvent();
     }
 

@@ -4,6 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -22,28 +23,29 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 
     @BindView(R.id.fl_container)
     FrameLayout fl_container;
-
     @BindView(R.id.navigation_view)
     NavigationView navigationView;
-
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     private ActionBarDrawerToggle mDrawerToggle;
-
 
     @Override
     public int getLayoutId() {
         return R.layout.activity_main;
     }
 
-
     @Override
     protected void initView() {
         super.initView();
+        initDrawerToggleView();
         initNavigationView();
+    }
 
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close) {
+    private void initDrawerToggleView() {
+        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,toolbar, R.string.open, R.string.close) {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
@@ -56,8 +58,7 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
             }
         };
         mDrawerToggle.syncState();
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
-        
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
     }
 
     private void initNavigationView() {
@@ -66,7 +67,7 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 
     @Override
     public void initToolBar() {
-
+        setSupportActionBar(toolbar);
     }
 
     @Override
@@ -78,7 +79,7 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
-            case R.id.item_single_1:
+            case R.id.single_1:
                 break;
             default:
                 break;

@@ -9,7 +9,7 @@
     <!--</style>-->
 
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!--状态栏颜色-->
         <item name="colorPrimaryDark">@color/Indigo_colorPrimaryDark</item>
         <!--Toolbar颜色-->
