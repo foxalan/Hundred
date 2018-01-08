@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:onClick="onClick"
+        android:text="Provider Add"
+        android:id="@+id/bt_provider_add"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="onClick"
+        android:text="Provider Delete"
+        android:id="@+id/bt_provider_delete"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onClick"
+        android:text="Provider Search"
+        android:id="@+id/bt_provider_search"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="onClick"
+        android:text="Provider Replace"
+        android:id="@+id/bt_provider_replace"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

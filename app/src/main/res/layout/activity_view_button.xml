@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <Button
+        android:layout_margin="@dimen/margin_normal"
+        android:id="@+id/bt_test"
+        android:text="text"
+        android:background="@drawable/bg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <View
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/color_custom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <RadioGroup
+        android:layout_marginTop="@dimen/margin_normal"
+        android:id="@+id/rg_sex"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:background="@drawable/bg_radio_button"
+            android:id="@+id/rb_male"
+            android:text="MALE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:text="FEMALE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <View
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/color_custom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <CheckBox
+        android:id="@+id/cb_red"
+        android:checked="true"
+        android:text="RED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/cb_yellow"
+        android:text="YELLOW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <CheckBox
+        android:id="@+id/cb_blue"
+        android:text="BLUE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/color_custom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <ToggleButton
+        android:id="@+id/tb_test"
+        android:layout_margin="@dimen/margin_normal"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Switch
+        android:id="@+id/switch_test"
+        android:layout_margin="@dimen/margin_normal"
+        android:textOn="ON"
+        android:textOff="OFF"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/color_custom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_margin="@dimen/margin_normal"
+        android:textSize="@dimen/text_size_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/color_custom"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+
+    <TextClock
+        android:layout_marginTop="@dimen/margin_normal"
+        android:format12Hour="yyyy:mm:dd hh:mma EEEE"
+        android:textSize="@dimen/text_size_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <AnalogClock
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

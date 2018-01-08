@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_margin_normal">5dp</dimen>
+
+
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_small">15sp</dimen>
+    <dimen name="text_size_mid">20sp</dimen>
+    <dimen name="text_size_big">30sp</dimen>
+
+    <dimen name="margin_small">2dp</dimen>
+    <dimen name="margin_normal">5dp</dimen>
+    <dimen name="margin_big">10dp</dimen>
+
+    <dimen name="padding_small">2dp</dimen>
+    <dimen name="padding_normal">5dp</dimen>
+    <dimen name="padding_big">10dp</dimen>
+
+
+    <dimen name="dimen_text_width">60dp</dimen>
+
+    <dimen name="dialog_margin_left">40sp</dimen>
+    <dimen name="dialog_margin_right">40sp</dimen>
+    <dimen name="dialog_margin_top">160sp</dimen>
+    <dimen name="dialog_margin_bottom">160sp</dimen>
+</resources>

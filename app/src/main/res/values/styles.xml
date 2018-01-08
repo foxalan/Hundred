@@ -1,0 +1,75 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--状态栏颜色-->
+        <item name="colorPrimaryDark">@color/Indigo_colorPrimaryDark</item>
+        <!--Toolbar颜色-->
+        <item name="colorPrimary">@color/Indigo_colorPrimary</item>
+        <!--返回键样式-->
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowToggle</item>
+    </style>
+
+    <style name="AppTheme.DrawerArrowToggle" parent="Base.Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <color name="Indigo_colorPrimaryDark">#303f9f</color>
+    <color name="Indigo_colorPrimary">#3f51b5</color>
+    <color name="Indigo_nav_color">#4675FF</color>
+
+
+    <style name="SettingTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+
+        <item name="colorPrimary">@color/myBarColor</item>
+        <item name="colorPrimaryDark">@color/myBarColor</item>
+        <item name="colorAccent">@color/myBarColor</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <!--<item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>-->
+
+    </style>
+
+
+    <style name="OverflowButtonStyle">
+        <!--<item name="android:src">@drawable/bg_border_color_white</item>-->
+        <!--<&#45;&#45; 修改overflow的icon &ndash;&gt;-->
+        <item name="android:paddingRight">@dimen/padding_big</item>
+    </style>
+
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- Api 21 -->
+        <item name="overlapAnchor">false</item>
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">@drawable/bg_border_color_white</item>
+        <!-- 设置弹出菜单文字颜色 -->
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+    </style>
+
+
+
+</resources>

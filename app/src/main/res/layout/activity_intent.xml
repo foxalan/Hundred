@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_margin="@dimen/margin_big"
+        android:text="Intent Contact"
+        android:id="@+id/bt_intent_contact"
+        android:onClick="onClick"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_margin="@dimen/margin_big"
+        android:text="Intent Image"
+        android:id="@+id/bt_intent_pic"
+        android:onClick="onClick"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_margin="@dimen/margin_big"
+        android:text="Intent Camera"
+        android:id="@+id/bt_intent_camera"
+        android:onClick="onClick"
+        android:textSize="@dimen/text_size_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_intent_show"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_margin="@dimen/margin_big"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <ImageView
+        android:id="@+id/iv_photo"
+        android:layout_margin="@dimen/margin_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

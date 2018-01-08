@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IdentifyView">
+        <attr name="identify_text_color" format="color"/>
+        <attr name="identify_text_size" format="dimension"/>
+        <attr name="identify_text_background" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="WaitView">
+        <attr name="radius" format="dimension"/>
+        <attr name="firstColor" format="color"/>
+        <attr name="secondColor" format="color"/>
+        <attr name="number" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="RadiusView">
+        <attr name="radius_size" format="dimension"/>
+        <attr name="background_color" format="color"/>
+        <attr name="radius_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SoundView">
+        <attr name="first_Color" format="color"/>
+        <attr name="second_Color" format="color"/>
+        <attr name="round_size" format="dimension"/>
+        <attr name="round_count" format="integer"/>
+    </declare-styleable>
+</resources>

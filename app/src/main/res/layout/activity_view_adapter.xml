@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:id="@+id/fl_adapter_container"
+        android:layout_weight="9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <View
+        android:background="@color/lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <LinearLayout
+            android:id="@+id/ll_adapter_message"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_adapter_message"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/tv_adapter_message"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center"
+                android:text="消息"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_adapter_contact"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_adapter_contact"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/tv_adapter_contact"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center"
+                android:text="联系人"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_adapter_state"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_adapter_state"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/iv_message_pressed"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/tv_adapter_state"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center"
+                android:text="动态"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

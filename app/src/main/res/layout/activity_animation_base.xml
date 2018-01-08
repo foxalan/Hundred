@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <Button
+      android:layout_margin="@dimen/margin_big"
+      android:text="Simple Animation"
+      android:id="@+id/bt_anim_simple"
+      android:onClick="onClick"
+      android:textSize="@dimen/text_size_normal"
+      android:background="@drawable/bg_border_color_white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <Button
+      android:layout_margin="@dimen/margin_big"
+      android:text="Bezier Animation"
+      android:id="@+id/bt_anim_bezier"
+      android:onClick="onClick"
+      android:textSize="@dimen/text_size_normal"
+      android:background="@drawable/bg_border_color_white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <Button
+      android:layout_margin="@dimen/margin_big"
+      android:text="Vector Animation"
+      android:id="@+id/bt_anim_vector"
+      android:onClick="onClick"
+      android:textSize="@dimen/text_size_normal"
+      android:background="@drawable/bg_border_color_white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+  <Button
+      android:layout_margin="@dimen/margin_big"
+      android:text="Animation Demo"
+      android:id="@+id/bt_anim_demo"
+      android:onClick="onClick"
+      android:textSize="@dimen/text_size_normal"
+      android:background="@drawable/bg_border_color_white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textStyle="bold"
+        android:text="TextView"
+        android:textColor="@color/color_progress_bar"
+        android:textSize="@dimen/text_size_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/color_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:textSize="@dimen/text_size_normal"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:id="@+id/tv_toast"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/bg_border_color_white"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <TextView
+        android:textColor="@color/color_progress_bar"
+        android:textIsSelectable="true"
+        android:ellipsize="marquee"
+        android:id="@+id/tv_marquee"
+        android:focusable="true"
+        android:singleLine="true"
+        android:focusableInTouchMode="true"
+        android:scrollHorizontally="true"
+        android:text="hello world my dear friend this is a long long string~~~~hello world my dear friend this is a long long string"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_margin="@dimen/text_size_small"
+        android:background="@color/color_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:text="自定义TextView实现验证码功能"
+        android:textColor="@color/color_progress_bar"
+        android:textSize="@dimen/text_size_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/color_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <com.example.alan.hundred.view.IdentifyView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:identify_text_size="@dimen/text_size_normal"
+        app:identify_text_color="@color/colorAccent"/>
+
+
+
+</LinearLayout>

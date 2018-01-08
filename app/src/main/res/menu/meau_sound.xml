@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always|withText"
+        android:visible="true"
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/ic_services"
+        />
+
+    <item
+        android:title="Sound"
+        app:showAsAction="always">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="Sound 10">
+
+                </item>
+                <item android:title="Sound 11">
+
+                </item>
+            </group>
+
+        </menu>
+    </item>
+
+
+</menu>
