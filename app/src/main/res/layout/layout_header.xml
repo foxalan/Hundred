@@ -45,6 +45,7 @@
             android:layout_height="wrap_content" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_user_level"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tv_user_name"

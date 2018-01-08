@@ -77,7 +77,7 @@ public class AdapterActivity extends BaseHomeActivity {
         contactFragment = ListContactFragment.getInstance();
         stateFragment = ListStateFragment.getInstance();
 
-        getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, contactFragment).commit();
+//        getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, contactFragment).commit();
     }
 
     @Override
@@ -107,12 +107,12 @@ public class AdapterActivity extends BaseHomeActivity {
                     setBackGround(0);
                     break;
                 case R.id.ll_adapter_contact:
-                    getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, contactFragment).commit();
+//                    getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, contactFragment).commit();
 
                     setBackGround(1);
                     break;
                 case R.id.ll_adapter_state:
-                    getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, stateFragment).commit();
+//                    getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, stateFragment).commit();
 
                     setBackGround(2);
                     break;

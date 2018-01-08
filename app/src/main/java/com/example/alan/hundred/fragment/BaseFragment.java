@@ -1,12 +1,7 @@
 package com.example.alan.hundred.fragment;
 
-import android.annotation.SuppressLint;
-
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
-
+import android.support.v4.app.Fragment;
 
 
 public abstract class BaseFragment extends Fragment {
@@ -22,9 +17,5 @@ public abstract class BaseFragment extends Fragment {
         setRetainInstance(true);
     }
 
-    @SuppressLint("CommitTransaction")
-    public FragmentManager getTransaction() {
 
-        return getFragmentManager();
-    }
 }

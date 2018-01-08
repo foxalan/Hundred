@@ -12,7 +12,6 @@ import android.widget.GridView;
 
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.animation.AnimActivity;
-import com.example.alan.hundred.activity.animation.AnimationActivity;
 import com.example.alan.hundred.activity.intent.IntentActivity;
 import com.example.alan.hundred.activity.provider.FirstProviderActivity;
 import com.example.alan.hundred.activity.storage.StorageActivity;
@@ -27,7 +26,7 @@ import java.util.List;
 
 /**
  * Function :
- * Author : Alan
+ * @Author : Alan
  * Modify Date : 22/9/17
  * Issue : TODO
  * Whether solve :
@@ -43,11 +42,9 @@ public class HomeFragment extends BaseFragment {
     private ChaptersAdapter chaptersAdapter;
 
     public static HomeFragment getInstance() {
-
         if (homeFragment == null) {
             homeFragment = new HomeFragment();
         }
-
         return homeFragment;
     }
 
@@ -57,25 +54,21 @@ public class HomeFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.activity_home, container, false);
-
         initViews(rootView);
         initData();
         initEvent();
-
-
         return rootView;
     }
 
     private void initViews(View rootView) {
 
-        gv_home = (GridView) rootView.findViewById(R.id.gv_home);
+        gv_home = rootView.findViewById(R.id.gv_home);
     }
 
     private void initData() {
 
         listSource = new ListSource(getActivity());
         chapterInfoList = listSource.getChapterInfoList();
-
         chaptersAdapter = new ChaptersAdapter(getActivity(), chapterInfoList, R.layout.grid_home_item);
 
         Log.d("TANG", chapterInfoList.size() + "================");
@@ -84,7 +77,6 @@ public class HomeFragment extends BaseFragment {
     private void initEvent() {
 
         gv_home.setAdapter(chaptersAdapter);
-
         gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -115,6 +107,8 @@ public class HomeFragment extends BaseFragment {
                         break;
                     case 8:
 
+                        break;
+                    default:
                         break;
                 }
             }

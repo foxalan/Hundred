@@ -3,9 +3,7 @@ package com.example.alan.hundred.util;
 
 
 import android.app.Fragment;
-import android.app.FragmentTransaction;
 
-import com.example.alan.hundred.R;
 import com.example.alan.hundred.fragment.BaseFragment;
 
 import java.util.ArrayList;
@@ -27,13 +25,13 @@ public class FragmentUtil {
 
     public static void show(Fragment fragment) {
 
-        FragmentTransaction transaction = firstFragment.getTransaction().beginTransaction();
+//        FragmentTransaction transaction = firstFragment.getTransaction().beginTransaction();
 
         if (isContain(fragment)) {
 
         }
 
-        transaction.replace(R.id.fl_container,fragment).commit();
+//        transaction.replace(R.id.fl_container,fragment).commit();
     }
 
     private static boolean isContain(Fragment fragment) {
