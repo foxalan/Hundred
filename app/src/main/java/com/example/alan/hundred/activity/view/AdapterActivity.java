@@ -13,12 +13,12 @@ import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
 
 import com.example.alan.hundred.fragment.adapter.ListContactFragment;
-import com.example.alan.hundred.fragment.adapter.ListMessageFragment;
+
 import com.example.alan.hundred.fragment.adapter.ListStateFragment;
 
 /**
  * Function :
- * Author : Alan
+ * @Author : Alan
  * Modify Date : 25/9/17
  * Issue : TODO
  * Whether solve :
@@ -26,7 +26,7 @@ import com.example.alan.hundred.fragment.adapter.ListStateFragment;
 
 public class AdapterActivity extends BaseHomeActivity {
 
-    private ListMessageFragment messageFragment;
+
     private ListContactFragment contactFragment;
     private ListStateFragment stateFragment;
 
@@ -73,21 +73,16 @@ public class AdapterActivity extends BaseHomeActivity {
         tv_adapter_contact = (TextView) findViewById(R.id.tv_adapter_contact);
         tv_adapter_state = (TextView) findViewById(R.id.tv_adapter_state);
 
-        messageFragment = ListMessageFragment.getInstance();
+
         contactFragment = ListContactFragment.getInstance();
         stateFragment = ListStateFragment.getInstance();
-        //   FragmentUtil.show(messageFragment);
 
-        getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, messageFragment).commit();
-
+        getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, contactFragment).commit();
     }
 
     @Override
     public void initData() {
-
         setBackGround(0);
-
-
     }
 
     @Override
@@ -98,8 +93,6 @@ public class AdapterActivity extends BaseHomeActivity {
         ll_adapter_message.setOnClickListener(buttonClick);
         ll_adapter_contact.setOnClickListener(buttonClick);
         ll_adapter_state.setOnClickListener(buttonClick);
-
-
     }
 
 
@@ -109,7 +102,7 @@ public class AdapterActivity extends BaseHomeActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.ll_adapter_message:
-                    getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, messageFragment).commit();
+                    //     getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, messageFragment).commit();
 
                     setBackGround(0);
                     break;
@@ -123,6 +116,8 @@ public class AdapterActivity extends BaseHomeActivity {
 
                     setBackGround(2);
                     break;
+                default:
+                    break;
             }
         }
     }
@@ -133,17 +128,18 @@ public class AdapterActivity extends BaseHomeActivity {
             case 0:
                 iv_adapter_message.setImageResource(R.drawable.iv_message_pressed);
                 tv_adapter_message.setTextColor(color_pressed);
-
                 break;
             case 1:
                 iv_adapter_contact.setImageResource(R.drawable.iv_contact_pressed);
                 tv_adapter_contact.setTextColor(color_pressed);
-
                 break;
             case 2:
                 iv_adapter_state.setImageResource(R.drawable.iv_state_pressed);
                 tv_adapter_state.setTextColor(color_pressed);
                 break;
+            default:
+                break;
+
         }
     }
 
@@ -158,13 +154,7 @@ public class AdapterActivity extends BaseHomeActivity {
         iv_adapter_contact.setImageResource(R.drawable.iv_contact_normal);
         tv_adapter_contact.setTextColor(color_normal);
 
-
         iv_adapter_state.setImageResource(R.drawable.iv_state_normal);
         tv_adapter_state.setTextColor(color_normal);
     }
-
-
-
-
-
 }

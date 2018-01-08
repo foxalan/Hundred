@@ -3,12 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.yydcdut.sdlv.SlideAndDragListView
 
-        android:id="@+id/lv_slide_drag"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:divider="@color/lightgray"
-        android:dividerHeight="0.5dp"/>
 
 </LinearLayout>

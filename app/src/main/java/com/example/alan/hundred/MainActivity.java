@@ -21,6 +21,10 @@ import com.example.alan.hundred.service.CustomService;
 import com.example.alan.hundred.util.FragmentUtil;
 import com.example.alan.hundred.util.ShareUtils;
 
+/**
+ * @author Alan
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     public static Handler mHandler = new Handler() {
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             if (msg.what == 0x123) {
                 Log.d("TANG", "==================================");
             }
+
         }
     };
 
@@ -39,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private android.support.design.widget.NavigationView navigationview;
     private android.support.v4.widget.DrawerLayout drawerlayout;
 
-    /*创建一个Drawerlayout和Toolbar联动的开关*/
+
     private ActionBarDrawerToggle toggle;
 
     private AnimationFragment animationFragment;
@@ -48,10 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-
         super.onResume();
-
-
     }
 
     @Override
@@ -66,15 +68,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initViews();
-
         setActionBar();
-
         setDrawerToggle();
-
         setListener();
-
         initEvents();
-
         initUseTime();
     }
 
@@ -93,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /*设置ActionBar*/
+
     private void setActionBar() {
         setSupportActionBar(toolbar);
         /*显示Home图标*/
@@ -101,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    /*设置Drawerlayout的开关,并且和Home图标联动*/
+
     private void setDrawerToggle() {
         toggle = new ActionBarDrawerToggle(this, drawerlayout, toolbar, 0, 0);
         drawerlayout.addDrawerListener(toggle);
