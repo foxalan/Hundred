@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
+import com.example.alan.hundred.util.L;
 import com.example.alan.hundred.view.CustomDialog;
 import com.example.alan.hundred.view.DialogView;
 

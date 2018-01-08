@@ -3,7 +3,6 @@ package com.example.alan.hundred;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.FrameLayout;
 
 import com.example.alan.hundred.base.RxBaseActivity;
@@ -14,7 +13,7 @@ import butterknife.BindView;
  * @author Alan
  */
 
-public class MainActivity extends RxBaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+public  class MainActivity extends RxBaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
     @BindView(R.id.fl_container)
@@ -30,41 +29,21 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
     }
 
 
+
     @Override
     public void initToolBar() {
 
     }
 
     @Override
-    protected void initView() {
-        super.initView();
-        initNavigationView();
-    }
-
-    /**
-     * 初始化NavigationView
-     */
-    private void initNavigationView() {
-        View headView = navigationView.getHeaderView(0);
-
-    }
-
-    @Override
     public void initEvent() {
         navigationView.setNavigationItemSelectedListener(this);
-
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item_single_1:
-
-                break;
-            case R.id.item_single_2:
-                break;
-            default:
-                break;
+        switch (item.getItemId()){
+            case R.id.item_sigle_1:
         }
         return false;
     }
