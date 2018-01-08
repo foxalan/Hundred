@@ -16,30 +16,24 @@ import butterknife.Unbinder;
  * Whether Solve :
  */
 
-public abstract class RxBaseActivity extends AppCompatActivity {
-
+ public abstract class RxBaseActivity extends AppCompatActivity {
 
     /**
      * 得到当前的Layout
      *
      * @return
      */
-    abstract int getLayoutId();
+    public abstract int getLayoutId();
 
     /**
      * 初始化ToolBar
      */
-    abstract void initToolBar();
-
-    /**
-     *
-     * @param savedInstanceState
-     */
+    public abstract void initToolBar();
 
     /**
      * 初始化事件
      */
-    abstract void initEvent();
+    public abstract void initEvent();
 
     private Unbinder unbinder;
 
