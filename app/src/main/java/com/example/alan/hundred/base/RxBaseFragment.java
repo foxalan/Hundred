@@ -34,18 +34,27 @@ public abstract class RxBaseFragment extends Fragment {
         fragmentActivity = (FragmentActivity) context;
     }
 
+    public FragmentActivity getBaseActivity() {
+        if (fragmentActivity != null) {
+
+            return fragmentActivity;
+        }
+
+        return null;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(getLayoutId(),container,false);
+        rootView = inflater.inflate(getLayoutId(), container, false);
         return rootView;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        unbinder = ButterKnife.bind(this,view);
+        unbinder = ButterKnife.bind(this, view);
         finishCreateView(savedInstanceState);
     }
 
@@ -57,7 +66,6 @@ public abstract class RxBaseFragment extends Fragment {
     public abstract void finishCreateView(Bundle state);
 
 
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -66,6 +74,7 @@ public abstract class RxBaseFragment extends Fragment {
 
     /**
      * 获取Layout
+     *
      * @return
      */
     public abstract int getLayoutId();

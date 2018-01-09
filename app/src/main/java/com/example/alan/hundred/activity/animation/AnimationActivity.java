@@ -51,7 +51,6 @@ public class AnimationActivity extends BaseHomeActivity {
     }
 
 
-
     @Override
     public void initViews() {
 
@@ -132,7 +131,7 @@ public class AnimationActivity extends BaseHomeActivity {
                     @Override
                     public void onAnimationUpdate(ValueAnimator animation) {
                         float x = (float) animation.getAnimatedValue();
-                        L.d("x:"+x);
+                        L.d("x:" + x);
                         iv_anim.setScaleY(x);
                         iv_anim.setAlpha(x);
                     }
@@ -146,6 +145,8 @@ public class AnimationActivity extends BaseHomeActivity {
                 animationDrawable.start();
 
 
+                break;
+            default:
                 break;
         }
     }
