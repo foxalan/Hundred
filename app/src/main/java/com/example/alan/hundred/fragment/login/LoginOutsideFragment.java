@@ -23,7 +23,6 @@ public class LoginOutsideFragment extends RxBaseFragment {
         if (mLoginOutsideFragment == null) {
             mLoginOutsideFragment = new LoginOutsideFragment();
         }
-
         return mLoginOutsideFragment;
     }
 

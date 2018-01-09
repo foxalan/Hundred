@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -60,9 +61,9 @@
                 android:drawablePadding="@dimen/default_general_margin"
                 android:drawableStart="@drawable/ic_login_username_default"
                 android:ellipsize="start"
-                android:hint="@string/login_hint_account"
+                android:hint="帐号"
                 android:inputType="textVisiblePassword"
-                android:maxLines="1"
+                android:singleLine="true"
                 android:textColor="@color/black_80"
                 android:textColorHint="@color/gray_20"
                 android:textSize="@dimen/default_medium_text_size" />
@@ -92,7 +93,7 @@
             android:background="@android:color/transparent"
             android:drawablePadding="@dimen/default_general_margin"
             android:drawableStart="@drawable/ic_login_password_default"
-            android:hint="@string/login_hint_password"
+            android:hint="密码"
             android:inputType="textPassword"
             android:maxLines="1"
             android:textColor="@color/black_80"
@@ -111,7 +112,7 @@
         android:layout_marginTop="@dimen/default_long_margin"
         android:background="@drawable/corner_btn"
         android:gravity="center"
-        android:text="@string/login"
+        android:text="登陆"
         android:textColor="@color/white"
         android:textSize="@dimen/default_medium_text_size" />
 
