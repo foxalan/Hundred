@@ -55,6 +55,13 @@
         <item>好友</item>
         <item>大学</item>
     </string-array>
+
+    <string-array name="edit">
+        <item>登录</item>
+        <item>注册</item>
+        <item>登陆</item>
+    </string-array>
+
     <string-array name="flipper">
         <item>朋友</item>
         <item>好友</item>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:padding="@dimen/padding_margin_normal"
+            android:background="@drawable/bg_edit_text"
+            android:src="@drawable/ic_view_edit_text_username"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <EditText
+            android:paddingLeft="@dimen/padding_normal"
+            android:textSize="@dimen/text_size_big"
+            android:hint="username"
+            android:background="@drawable/bg_border_color_white"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:padding="@dimen/padding_margin_normal"
+            android:background="@drawable/bg_edit_text"
+            android:src="@drawable/ic_view_edit_text_password"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <EditText
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/padding_normal"
+            android:textSize="@dimen/text_size_big"
+            android:hint="password"
+            android:background="@drawable/bg_border_color_white"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:foreground="?attr/selectableItemBackground"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardBackgroundColor="@color/color_edit_background"
+        app:cardCornerRadius="1dp"
+        app:cardElevation="24dp">
+
+        <TextView
+            android:textColor="@color/white"
+            android:text="LOGIN"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_small"
+            android:id="@+id/tv_grid_chapter_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_text_width" />
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="300dp"
+        android:layout_height="50dp">
+
+        <TextView
+            android:text="FORGET PASSWORD"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/white"
+            android:layout_weight="4"
+            android:gravity="start"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:textColor="@color/white"
+            android:text="REGISTER"
+            android:gravity="end"
+            android:textSize="@dimen/text_size_small"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

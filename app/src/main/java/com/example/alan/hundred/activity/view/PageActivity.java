@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * Function :
- * Author : Alan
+ * @Author : Alan
  * Modify Date : 27/9/17
  * Issue : TODO
  * Whether solve :
@@ -43,7 +43,6 @@ public class PageActivity extends BaseHomeActivity {
 
         //去掉阴影
         if (getSupportActionBar() != null) {
-
             getSupportActionBar().setElevation(0);
         }
     }
