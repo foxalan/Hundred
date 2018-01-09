@@ -11,7 +11,6 @@ import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
 import com.example.alan.hundred.fragment.login.BiLoginFragment;
 import com.example.alan.hundred.fragment.login.LoginOutsideFragment;
-import com.example.alan.hundred.fragment.login.RegisterFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -58,11 +57,9 @@ public class EditActivity extends BaseHomeActivity {
 
         LoginOutsideFragment loginOutsideFragment = LoginOutsideFragment.getInstance();
         BiLoginFragment biLoginFragment = BiLoginFragment.getInstance();
-        RegisterFragment registerFragment = RegisterFragment.getInstance();
 
         fragmentList.add(loginOutsideFragment);
         fragmentList.add(biLoginFragment);
-        fragmentList.add(registerFragment);
     }
 
     @Override

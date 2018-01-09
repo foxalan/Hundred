@@ -57,9 +57,8 @@
     </string-array>
 
     <string-array name="edit">
-        <item>登录</item>
-        <item>注册</item>
-        <item>登陆</item>
+        <item>NormalLogin</item>
+        <item>BibiLogin</item>
     </string-array>
 
     <string-array name="flipper">

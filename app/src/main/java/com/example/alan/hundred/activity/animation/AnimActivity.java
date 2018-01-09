@@ -44,19 +44,21 @@ public class AnimActivity extends BaseHomeActivity {
 
     }
 
-    public void onClick(View view){
-        switch (view.getId()){
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.bt_anim_simple:
-                startActivity(new Intent(AnimActivity.this,AnimationActivity.class));
+                startActivity(new Intent(AnimActivity.this, AnimationActivity.class));
                 break;
             case R.id.bt_anim_bezier:
-                startActivity(new Intent(AnimActivity.this,BezierAnimActivity.class));
+                startActivity(new Intent(AnimActivity.this, BezierAnimActivity.class));
                 break;
             case R.id.bt_anim_vector:
-                startActivity(new Intent(AnimActivity.this,VectorActivity.class));
+                startActivity(new Intent(AnimActivity.this, VectorActivity.class));
                 break;
             case R.id.bt_anim_demo:
-                startActivity(new Intent(AnimActivity.this,DemoAnimActivity.class));
+                startActivity(new Intent(AnimActivity.this, DemoAnimActivity.class));
+                break;
+            default:
                 break;
 
 
