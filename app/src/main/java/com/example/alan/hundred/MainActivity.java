@@ -6,9 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.AppCompatTextView;
-
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,10 +34,7 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
     NavigationView navigationView;
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
-//    @BindView(R.id.toolbar)
-//    Toolbar toolbar;
 
-    private ActionBarDrawerToggle mDrawerToggle;
     private HomeFragment mHomeFragment;
     private SettingFragment mSettingFragment;
     private int index = 0;
@@ -54,15 +49,8 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
     @Override
     protected void initView() {
         super.initView();
-        initDrawerToggleView();
         initNavigationView();
         initFragment();
-    }
-
-
-    private void initDrawerToggleView() {
-
-
     }
 
     private void initNavigationView() {
@@ -82,8 +70,6 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 
     @Override
     public void initToolBar() {
-//        setSupportActionBar(toolbar);
-
     }
 
     @Override

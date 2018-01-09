@@ -37,10 +37,13 @@ public class CustomActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         toolbar = (Toolbar) findViewById(R.id.tl_custom);
-        toolbar.setTitle("Toolbar");//设置Toolbar标题
-        toolbar.setTitleTextColor(Color.parseColor("#ffffff")); //设置标题颜色
+        //设置Toolbar标题
+        toolbar.setTitle("Toolbar");
+        //设置标题颜色
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));
         setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true); //设置返回键可用
+        //设置返回键可用
+        getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //创建返回键，并实现打开关/闭监听
 
@@ -79,23 +82,20 @@ public class CustomActivity extends BaseActivity {
             }
         };
         mDrawerToggle.syncState();
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
         //设置菜单列表
-
-
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lvs);
         lvLeftMenu.setAdapter(arrayAdapter);
-
-
     }
 
-
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
         if(id == android.R.id.home)
         {
-            mDrawerLayout.openDrawer(GravityCompat.START);//打开侧滑菜单
+            //打开侧滑菜单
+            mDrawerLayout.openDrawer(GravityCompat.START);
             return true ;
         }
 

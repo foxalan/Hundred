@@ -13,7 +13,8 @@ import com.example.alan.hundred.activity.BaseActivity;
 
 /**
  * Function :
- * Author : Alan
+ *
+ * @Author : Alan
  * Modify Date : 22/9/17
  * Issue : TODO
  * Whether solve :
@@ -70,19 +71,14 @@ public class TextActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        SubMenu subMenu = menu.addSubMenu("Font size");
+        SubMenu subMenu = menu.addSubMenu("字体");
 
         subMenu.setHeaderIcon(R.drawable.ic_animation);
         subMenu.setHeaderTitle("字体大小");
-        subMenu.add(0, FONT_10, 0, "FONT 10");
-        subMenu.add(0, FONT_11, 0, "FONT 11");
-        subMenu.add(0, FONT_12, 0, "FONT 12");
-        subMenu.add(0, FONT_13, 0, "FONT 13");
-
-        SubMenu soundMenu = menu.addSubMenu("Sound size");
-        soundMenu.setHeaderTitle("声音大小");
-        soundMenu.add(0, FONT_10, 0, "Sound 10");
-        soundMenu.add(0, FONT_11, 0, "Sound 11");
+        subMenu.add(0, FONT_10, 0, "FONT 20");
+        subMenu.add(0, FONT_11, 0, "FONT 25");
+        subMenu.add(0, FONT_12, 0, "FONT 30");
+        subMenu.add(0, FONT_13, 0, "FONT 35");
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -94,15 +90,24 @@ public class TextActivity extends BaseActivity {
             finish();
         }
 
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case FONT_10:
-                tv_marquee.setTextSize(10*2);
+                tv_toast.setTextSize(20);
+                tv_marquee.setTextSize(20);
                 break;
             case FONT_11:
+                tv_toast.setTextSize(25);
+                tv_marquee.setTextSize(25);
                 break;
             case FONT_12:
+                tv_toast.setTextSize(30);
+                tv_marquee.setTextSize(30);
                 break;
             case FONT_13:
+                tv_toast.setTextSize(35);
+                tv_marquee.setTextSize(35);
+                break;
+            default:
                 break;
         }
 
