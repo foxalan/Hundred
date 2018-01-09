@@ -1,11 +1,14 @@
 package com.example.alan.hundred.fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.example.alan.hundred.MainActivity;
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.animation.AnimActivity;
 import com.example.alan.hundred.activity.intent.IntentActivity;
@@ -25,6 +28,7 @@ import butterknife.BindView;
 
 /**
  * Function :
+ *
  * @Author : Alan
  * Modify Date : 22/9/17
  * Issue : TODO
@@ -36,7 +40,9 @@ public class HomeFragment extends RxBaseFragment {
     private static HomeFragment homeFragment;
 
     @BindView(R.id.gv_home)
-    GridView gv_home;
+    GridView mGridView;
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
 
     private List<ChapterInfo> chapterInfoList = new ArrayList<>();
     private ListSource listSource;
@@ -52,8 +58,23 @@ public class HomeFragment extends RxBaseFragment {
 
     @Override
     public void finishCreateView(Bundle state) {
+        initToolBar();
         initData();
         initEvent();
+    }
+
+    private void initToolBar() {
+        mToolbar.setTitle("主页");
+        mToolbar.setNavigationIcon(R.drawable.ic_navigation_drawer);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Activity activity = getBaseActivity();
+                if (activity instanceof MainActivity) {
+                    ((MainActivity) activity).toggleDrawer();
+                }
+            }
+        });
     }
 
     @Override
@@ -70,8 +91,8 @@ public class HomeFragment extends RxBaseFragment {
 
     private void initEvent() {
 
-        gv_home.setAdapter(chaptersAdapter);
-        gv_home.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mGridView.setAdapter(chaptersAdapter);
+        mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {

@@ -8,7 +8,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.Toolbar;
+
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,8 +35,8 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
     NavigationView navigationView;
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawerLayout;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
+//    @BindView(R.id.toolbar)
+//    Toolbar toolbar;
 
     private ActionBarDrawerToggle mDrawerToggle;
     private HomeFragment homeFragment;
@@ -59,23 +59,23 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 
 
     private void initDrawerToggleView() {
-        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.open, R.string.close) {
-            @Override
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView);
+//        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.open, R.string.close) {
+//            @Override
+//            public void onDrawerOpened(View drawerView) {
+//                super.onDrawerOpened(drawerView);
+//
+//            }
+//
+//            @Override
+//            public void onDrawerClosed(View drawerView) {
+//                super.onDrawerClosed(drawerView);
+//
+//            }
+//        };
+//        mDrawerToggle.syncState();
+//        mDrawerLayout.addDrawerListener(mDrawerToggle);
 
-            }
 
-            @Override
-            public void onDrawerClosed(View drawerView) {
-                super.onDrawerClosed(drawerView);
-
-            }
-        };
-        mDrawerToggle.syncState();
-        mDrawerLayout.addDrawerListener(mDrawerToggle);
-
-        toolbar.setTitle("主页");
     }
 
     private void initNavigationView() {
@@ -93,7 +93,8 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 
     @Override
     public void initToolBar() {
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
+//    }
     }
 
     @Override
@@ -155,5 +156,16 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
             }
         }
         return true;
+    }
+
+    /**
+     * DrawerLayout侧滑菜单开关
+     */
+    public void toggleDrawer() {
+        if (mDrawerLayout.isDrawerOpen(GravityCompat.START)) {
+            mDrawerLayout.closeDrawer(GravityCompat.START);
+        } else {
+            mDrawerLayout.openDrawer(GravityCompat.START);
+        }
     }
 }
