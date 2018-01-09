@@ -17,5 +17,4 @@ public abstract class BaseFragment extends Fragment {
         setRetainInstance(true);
     }
 
-
 }

@@ -2,11 +2,7 @@ package com.example.alan.hundred.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
@@ -18,11 +14,14 @@ import com.example.alan.hundred.activity.storage.StorageActivity;
 import com.example.alan.hundred.activity.view.SimpleViewActivity;
 import com.example.alan.hundred.activity.viewgroup.CustomGroupActivity;
 import com.example.alan.hundred.adapter.ChaptersAdapter;
+import com.example.alan.hundred.base.RxBaseFragment;
 import com.example.alan.hundred.data.ListSource;
 import com.example.alan.hundred.info.ChapterInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
 
 /**
  * Function :
@@ -32,11 +31,13 @@ import java.util.List;
  * Whether solve :
  */
 
-public class HomeFragment extends BaseFragment {
+public class HomeFragment extends RxBaseFragment {
 
     private static HomeFragment homeFragment;
 
-    private GridView gv_home;
+    @BindView(R.id.gv_home)
+    GridView gv_home;
+
     private List<ChapterInfo> chapterInfoList = new ArrayList<>();
     private ListSource listSource;
     private ChaptersAdapter chaptersAdapter;
@@ -49,29 +50,22 @@ public class HomeFragment extends BaseFragment {
     }
 
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-
-        View rootView = inflater.inflate(R.layout.activity_home, container, false);
-        initViews(rootView);
+    public void finishCreateView(Bundle state) {
         initData();
         initEvent();
-        return rootView;
     }
 
-    private void initViews(View rootView) {
-
-        gv_home = rootView.findViewById(R.id.gv_home);
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_home;
     }
+
 
     private void initData() {
-
         listSource = new ListSource(getActivity());
         chapterInfoList = listSource.getChapterInfoList();
         chaptersAdapter = new ChaptersAdapter(getActivity(), chapterInfoList, R.layout.grid_home_item);
-
-        Log.d("TANG", chapterInfoList.size() + "================");
     }
 
     private void initEvent() {
