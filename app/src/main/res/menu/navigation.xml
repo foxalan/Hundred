@@ -14,11 +14,16 @@
         <item
             android:id="@+id/single_3"
             android:icon="@drawable/view"
-            android:title="会员中心" />
+            android:title="设置中心" />
         <item
             android:id="@+id/single_4"
             android:icon="@drawable/iv_animation_advance"
             android:title="在线听歌" />
+
+        <item
+            android:id="@+id/item_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="设置与帮助" />
     </group>
 
 </menu>

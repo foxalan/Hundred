@@ -16,6 +16,7 @@ import android.widget.FrameLayout;
 
 import com.example.alan.hundred.base.RxBaseActivity;
 import com.example.alan.hundred.fragment.HomeFragment;
+import com.example.alan.hundred.fragment.SettingFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,8 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 //    Toolbar toolbar;
 
     private ActionBarDrawerToggle mDrawerToggle;
-    private HomeFragment homeFragment;
+    private HomeFragment mHomeFragment;
+    private SettingFragment mSettingFragment;
     private int index = 0;
     private int currentTabIndex = 0;
     private List<Fragment> fragmentList;
@@ -59,21 +61,6 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 
 
     private void initDrawerToggleView() {
-//        mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout, toolbar, R.string.open, R.string.close) {
-//            @Override
-//            public void onDrawerOpened(View drawerView) {
-//                super.onDrawerOpened(drawerView);
-//
-//            }
-//
-//            @Override
-//            public void onDrawerClosed(View drawerView) {
-//                super.onDrawerClosed(drawerView);
-//
-//            }
-//        };
-//        mDrawerToggle.syncState();
-//        mDrawerLayout.addDrawerListener(mDrawerToggle);
 
 
     }
@@ -86,15 +73,17 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
 
     private void initFragment() {
         fragmentList = new ArrayList<>();
-        homeFragment = HomeFragment.getInstance();
-        fragmentList.add(homeFragment);
+        mHomeFragment = HomeFragment.getInstance();
+        mSettingFragment = SettingFragment.getInstance();
+        fragmentList.add(mHomeFragment);
+        fragmentList.add(mSettingFragment);
     }
 
 
     @Override
     public void initToolBar() {
 //        setSupportActionBar(toolbar);
-//    }
+
     }
 
     @Override
@@ -103,8 +92,8 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
         // 添加显示第一个fragment
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.fl_container, homeFragment)
-                .show(homeFragment).commit();
+                .add(R.id.fl_container, mHomeFragment)
+                .show(mHomeFragment).commit();
     }
 
     @Override
@@ -113,6 +102,9 @@ public class MainActivity extends RxBaseActivity implements NavigationView.OnNav
         switch (item.getItemId()) {
             case R.id.single_1:
                 changeFragmentIndex(item, 0);
+                return true;
+            case R.id.item_settings:
+                changeFragmentIndex(item,1);
                 return true;
             default:
                 break;
