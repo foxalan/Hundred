@@ -83,7 +83,7 @@ public class ListSource {
         Bitmap bitmap_adapter = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_view_adapter);
         Bitmap bitmap_pager = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_view_page);
         Bitmap bitmap_progress = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_view_progress);
-        Bitmap bitmap_switcher = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_view_switcher);
+
         Bitmap bitmap_toast = BitmapFactory.decodeResource(context.getResources(), R.drawable.ic_view_toast);
         Bitmap bitmap_dialog = BitmapFactory.decodeResource(context.getResources(),R.drawable.ic_view_dialog);
 
@@ -93,7 +93,7 @@ public class ListSource {
         bitmapList.add(bitmap_adapter);
         bitmapList.add(bitmap_pager);
         bitmapList.add(bitmap_progress);
-        bitmapList.add(bitmap_switcher);
+
         bitmapList.add(bitmap_toast);
         bitmapList.add(bitmap_dialog);
 
