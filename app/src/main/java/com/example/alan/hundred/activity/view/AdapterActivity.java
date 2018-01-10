@@ -3,21 +3,23 @@ package com.example.alan.hundred.activity.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
-
 import com.example.alan.hundred.fragment.adapter.ListContactFragment;
-
 import com.example.alan.hundred.fragment.adapter.ListStateFragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Function :
+ *
  * @Author : Alan
  * Modify Date : 25/9/17
  * Issue : TODO
@@ -43,10 +45,11 @@ public class AdapterActivity extends BaseHomeActivity {
     private TextView tv_adapter_state;
 
     private ButtonClick buttonClick;
+    private List<Fragment> fragmentList = new ArrayList<>();
 
     private int color_normal = 0xFF8a8a8a;
     private int color_pressed = 0xFF81C9E1;
-
+    private int currentIndex = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -76,8 +79,8 @@ public class AdapterActivity extends BaseHomeActivity {
 
         contactFragment = ListContactFragment.getInstance();
         stateFragment = ListStateFragment.getInstance();
-
-//        getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, contactFragment).commit();
+        fragmentList.add(contactFragment);
+        fragmentList.add(stateFragment);
     }
 
     @Override
@@ -102,24 +105,34 @@ public class AdapterActivity extends BaseHomeActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.ll_adapter_message:
-                    //     getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, messageFragment).commit();
 
                     setBackGround(0);
                     break;
                 case R.id.ll_adapter_contact:
-//                    getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, contactFragment).commit();
 
+                    replaceFragment(contactFragment, 0);
                     setBackGround(1);
                     break;
                 case R.id.ll_adapter_state:
-//                    getFragmentManager().beginTransaction().replace(R.id.fl_adapter_container, stateFragment).commit();
-
+                    replaceFragment(stateFragment, 1);
                     setBackGround(2);
                     break;
                 default:
                     break;
             }
         }
+    }
+
+    private void replaceFragment(Fragment fragment, int index) {
+
+        android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.hide(fragmentList.get(currentIndex));
+        if (!fragment.isAdded()) {
+            ft.add(R.id.fl_adapter_container, fragment);
+        }
+        currentIndex = index;
+        ft.show(fragment);
+        ft.commit();
     }
 
     private void setBackGround(int position) {

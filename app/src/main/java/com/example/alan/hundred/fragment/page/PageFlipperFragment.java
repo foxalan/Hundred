@@ -2,8 +2,6 @@ package com.example.alan.hundred.fragment.page;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +58,7 @@ public class PageFlipperFragment extends BaseSupportFragment{
 
     private void initViews(View rootView) {
 
-        adapterViewFlipper = (AdapterViewFlipper) rootView.findViewById(R.id.avf_page);
+        adapterViewFlipper = rootView.findViewById(R.id.avf_page);
     }
 
     private void initData(){

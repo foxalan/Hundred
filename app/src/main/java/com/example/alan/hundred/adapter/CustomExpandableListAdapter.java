@@ -17,7 +17,7 @@ import java.util.List;
 
 /**
  * Function :
- * Author : Alan
+ * @Author : Alan
  * Modify Date : 25/9/17
  * Issue : TODO
  * Whether solve :
@@ -73,17 +73,17 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
 
-        if (convertView == null){
-            convertView = inflater.inflate(R.layout.grid_contact_group_item,parent,false);
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.grid_contact_group_item, parent, false);
         }
 
-        TextView tv_group = (TextView) convertView.findViewById(R.id.tv_group);
-        ImageView iv_group = (ImageView) convertView.findViewById(R.id.iv_group);
+        TextView tv_group =  convertView.findViewById(R.id.tv_group);
+        ImageView iv_group =  convertView.findViewById(R.id.iv_group);
 
         tv_group.setText(contactGroupList.get(groupPosition).getName());
-        if (!isExpanded){
+        if (!isExpanded) {
             iv_group.setImageResource(R.drawable.iv_expandable_right);
-        }else {
+        } else {
             iv_group.setImageResource(R.drawable.iv_expandable_down);
         }
 
@@ -93,14 +93,14 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
 
-        if (convertView == null){
-            convertView = inflater.inflate(R.layout.grid_contact_item,parent,false);
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.grid_contact_item, parent, false);
         }
 
-        TextView tv_list_contact_name = (TextView) convertView.findViewById(R.id.tv_list_contact_name);
-        TextView tv_list_contact_content = (TextView) convertView.findViewById(R.id.tv_list_contact_content);
+        TextView tv_list_contact_name = convertView.findViewById(R.id.tv_list_contact_name);
+        TextView tv_list_contact_content = convertView.findViewById(R.id.tv_list_contact_content);
 
-        Log.d("TANG",listList.size()+"==="+listList.get(1).get(1).toString());
+        Log.d("TANG", listList.size() + "===" + listList.get(1).get(1).toString());
         tv_list_contact_name.setText(listList.get(groupPosition).get(childPosition).getName());
         tv_list_contact_content.setText(listList.get(groupPosition).get(childPosition).getContent());
 

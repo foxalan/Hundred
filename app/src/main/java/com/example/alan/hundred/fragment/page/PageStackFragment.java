@@ -55,7 +55,7 @@ public class PageStackFragment extends BaseSupportFragment {
     }
 
     private void initViews(View rootView) {
-        sv_page = (StackView) rootView.findViewById(R.id.sv_page);
+        sv_page = rootView.findViewById(R.id.sv_page);
 
     }
 

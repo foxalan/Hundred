@@ -43,9 +43,7 @@ public class ListSource {
     }
 
     public List<ChapterInfo> getChapterInfoList() {
-
         initChapterList();
-
         return new ArrayList<>(chapterInfoList);
     }
 
