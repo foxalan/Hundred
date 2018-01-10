@@ -39,6 +39,9 @@ dependencies {
 
 
 
+    //左右滑动的ListView
+    compile 'com.yydcdut.sdlv:sdlv:0.7.0'
+
 
     compile files('libs/pushservice-5.9.0.59.jar')
     //圆形图片

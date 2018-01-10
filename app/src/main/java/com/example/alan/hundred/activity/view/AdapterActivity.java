@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
 import com.example.alan.hundred.fragment.adapter.ListContactFragment;
+import com.example.alan.hundred.fragment.adapter.ListMessageFragment;
 import com.example.alan.hundred.fragment.adapter.ListStateFragment;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ import java.util.List;
 
 public class AdapterActivity extends BaseHomeActivity {
 
-
+    private ListMessageFragment messageFragment;
     private ListContactFragment contactFragment;
     private ListStateFragment stateFragment;
 
@@ -79,8 +80,12 @@ public class AdapterActivity extends BaseHomeActivity {
 
         contactFragment = ListContactFragment.getInstance();
         stateFragment = ListStateFragment.getInstance();
+        messageFragment = ListMessageFragment.getInstance();
+        fragmentList.add(messageFragment);
         fragmentList.add(contactFragment);
         fragmentList.add(stateFragment);
+
+        getSupportFragmentManager().beginTransaction().add(R.id.fl_adapter_container,messageFragment).show(messageFragment).commit();
     }
 
     @Override
@@ -105,16 +110,15 @@ public class AdapterActivity extends BaseHomeActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.ll_adapter_message:
-
+                    replaceFragment(messageFragment,0);
                     setBackGround(0);
                     break;
                 case R.id.ll_adapter_contact:
-
-                    replaceFragment(contactFragment, 0);
+                    replaceFragment(contactFragment, 1);
                     setBackGround(1);
                     break;
                 case R.id.ll_adapter_state:
-                    replaceFragment(stateFragment, 1);
+                    replaceFragment(stateFragment, 2);
                     setBackGround(2);
                     break;
                 default:
