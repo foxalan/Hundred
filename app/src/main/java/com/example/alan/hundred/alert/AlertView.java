@@ -180,9 +180,11 @@ public class AlertView {
         tvAlert.setTypeface(Typeface.DEFAULT_BOLD);
         tvAlert.setTextColor(mContext.getResources().getColor(R.color.textColor_alert_button_cancel));
         tvAlert.setBackgroundResource(R.drawable.bg_alertbutton_bottom);
-        //  alertButtonListView.addFooterView(itemView);
-        if (mDataList!=null){
+        if(mCancel==null){
+            alertButtonListView.addFooterView(itemView);
+        }
 
+        if (mDataList!=null){
             AlertViewAdapter adapter = new AlertViewAdapter(mDataList, null);
             alertButtonListView.setAdapter(adapter);
             alertButtonListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
