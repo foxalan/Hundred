@@ -22,9 +22,15 @@ public class AlertViewBuilder {
     private Context mContext;
     private IAlertCallBack iAlertCallBack;
     private List<String> mDataList;
+    private String mCancel;
 
     public AlertViewBuilder setTitle(String title) {
         this.mTitle = title;
+        return this;
+    }
+
+    public AlertViewBuilder setCancel(String cancel) {
+        this.mCancel = cancel;
         return this;
     }
 
@@ -59,7 +65,7 @@ public class AlertViewBuilder {
     }
 
     public AlertView build() {
-        return new AlertView(mTitle, mContent, mDestructive, mType, mContext,iAlertCallBack,mDataList);
+        return new AlertView(mTitle, mContent, mDestructive, mType, mContext,iAlertCallBack,mDataList,mCancel);
     }
 
 

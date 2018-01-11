@@ -42,8 +42,7 @@ public class AlertView {
     private LayoutInflater layoutInflater;
     private IAlertCallBack iAlertCallBack;
     private List<String> mDataList;
-
-    private String cancel = "取消";
+    private String mCancel;
 
     /**
      * activity的根View
@@ -71,7 +70,8 @@ public class AlertView {
 
     public AlertView(String mTitle, String mContent, List<String> mDestructive,
                      AlertType mType, Context mContext, IAlertCallBack iAlertCallBack
-            , List<String> mDataList) {
+            , List<String> mDataList,
+                     String mCancel) {
         this.mTitle = mTitle;
         this.mContent = mContent;
         this.mDestructive = mDestructive;
@@ -79,6 +79,7 @@ public class AlertView {
         this.mContext = mContext;
         this.iAlertCallBack = iAlertCallBack;
         this.mDataList = mDataList;
+        this.mCancel = mCancel;
 
         Log.e(TAG, "AlertView: " + mTitle + mContent);
         layoutInflater = LayoutInflater.from(mContext);
@@ -155,9 +156,9 @@ public class AlertView {
         initListView();
 
         TextView tvAlertCancel = contentContainer.findViewById(R.id.tvAlertCancel);
-        if (cancel != null) {
+        if (mCancel != null) {
             tvAlertCancel.setVisibility(View.VISIBLE);
-            tvAlertCancel.setText(cancel);
+            tvAlertCancel.setText(mCancel);
             tvAlertCancel.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -174,21 +175,23 @@ public class AlertView {
 
         View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_alertbutton, null);
         TextView tvAlert = itemView.findViewById(R.id.tvAlert);
-        tvAlert.setText(cancel);
+        tvAlert.setText(mCancel);
         tvAlert.setClickable(true);
         tvAlert.setTypeface(Typeface.DEFAULT_BOLD);
         tvAlert.setTextColor(mContext.getResources().getColor(R.color.textColor_alert_button_cancel));
         tvAlert.setBackgroundResource(R.drawable.bg_alertbutton_bottom);
         //  alertButtonListView.addFooterView(itemView);
+        if (mDataList!=null){
 
-        AlertViewAdapter adapter = new AlertViewAdapter(mDataList, null);
-        alertButtonListView.setAdapter(adapter);
-        alertButtonListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                dismiss();
-            }
-        });
+            AlertViewAdapter adapter = new AlertViewAdapter(mDataList, null);
+            alertButtonListView.setAdapter(adapter);
+            alertButtonListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                    dismiss();
+                }
+            });
+        }
     }
 
     /**

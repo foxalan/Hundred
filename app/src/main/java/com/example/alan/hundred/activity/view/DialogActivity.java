@@ -1,6 +1,5 @@
 package com.example.alan.hundred.activity.view;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -46,7 +45,7 @@ public class DialogActivity extends BaseHomeActivity {
     private String mContent;
     private List<String> mDestructive = new ArrayList<>();
     private AlertType mType;
-    private Context mContext;
+    private String mCancel;
     private List<String> mDataList = new ArrayList<>();
 
     @Override
@@ -78,7 +77,7 @@ public class DialogActivity extends BaseHomeActivity {
         mType = AlertType.NORMAL;
         mDestructive.add("取消");
         mDestructive.add("确定");
-
+        mCancel = "取消";
         mDataList.add("从相册选择");
         mDataList.add("拍照");
     }
@@ -113,12 +112,22 @@ public class DialogActivity extends BaseHomeActivity {
             case R.id.bt_dialog_simple_bottom:
                 AlertView.builder()
                         .setTitle("拍照")
+                        .setCancel(mCancel)
                         .setDataList(mDataList)
                         .setContext(DialogActivity.this)
                         .setDialogType(AlertType.BOTTOM)
                         .build()
                         .show();
 
+                break;
+            case R.id.bt_dialog_bottom:
+                AlertView.builder().setTitle(mTitle)
+                        .setContent(mContent)
+                        .setContext(DialogActivity.this)
+                        .setCancel(mCancel)
+                        .setDialogType(AlertType.BOTTOM)
+                        .build()
+                        .show();
                 break;
             default:
                 break;
