@@ -1,5 +1,6 @@
 package com.example.alan.hundred.activity.view;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -8,12 +9,17 @@ import android.view.ViewGroup;
 
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
+import com.example.alan.hundred.alert.AlertType;
+import com.example.alan.hundred.alert.AlertView;
 import com.example.alan.hundred.view.CustomDialog;
 import com.example.alan.hundred.view.DialogView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Function :
- * Author : Alan
+ * @Author : Alan
  * Modify Date : 28/9/17
  * Issue : 1.Caused by: android.view.WindowManager$BadTokenException: Unable to add window
  * -- token android.os.BinderProxy@22701c7 is not valid; is your activity running?
@@ -32,8 +38,15 @@ public class DialogActivity extends BaseHomeActivity {
     private LayoutInflater layoutInflater;
 
     private View view_header;
-
     private DialogView dialogView;
+
+    private String mTitle;
+    private String mContent;
+    private List<String> mDestructive = new ArrayList<>();
+    private AlertType mType;
+    private Context mContext;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,12 +68,15 @@ public class DialogActivity extends BaseHomeActivity {
 
         rootView = getWindow().getDecorView().findViewById(android.R.id.content);
         view_header = layoutInflater.inflate(R.layout.layout_header, rootView, false);
-
-
     }
 
     @Override
     public void initData() {
+        mTitle = "title";
+        mContent = "4396 clear love run";
+        mType = AlertType.NORMAL;
+        mDestructive.add("取消");
+        mDestructive.add("确定");
 
     }
 
@@ -72,7 +88,13 @@ public class DialogActivity extends BaseHomeActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.bt_dialog_simple:
-                dialogView.show();
+                AlertView.builder().setTitle(mTitle)
+                        .setContent(mContent)
+                        .setContext(DialogActivity.this)
+                        .setDestructive(mDestructive)
+                        .setDialogType(mType)
+                        .bulid()
+                        .show();
                 break;
             default:
                 break;

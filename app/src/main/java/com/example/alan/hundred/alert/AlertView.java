@@ -2,6 +2,8 @@ package com.example.alan.hundred.alert;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +28,7 @@ import java.util.List;
 
 public class AlertView {
 
+    private static final String TAG = "AlertView";
     private String mTitle;
     private String mContent;
     private List<String> mDestructive;
@@ -93,7 +96,7 @@ public class AlertView {
             case NORMAL:
                 params.gravity = Gravity.CENTER;
                 margin_alert_left_right = mContext.getResources().getDimensionPixelSize(R.dimen.margin_alert_left_right);
-                params.setMargins(margin_alert_left_right, 0, margin_alert_left_right, 0);
+                params.setMargins(margin_alert_left_right,0, margin_alert_left_right,0);
                 contentContainer.setLayoutParams(params);
                 initAlertViews(layoutInflater);
                 break;
@@ -113,14 +116,16 @@ public class AlertView {
         viewStub.inflate();
         LinearLayout loAlertButtons = contentContainer.findViewById(R.id.loAlertButtons);
 
+
         for (int i = 0; i < mDestructive.size(); i++) {
+            Log.e(TAG, "initAlertViews: " );
             //如果不是第一个按钮
             if (i != 0) {
                 //添加上按钮之间的分割线
-                View divier = new View(mContext);
-                divier.setBackgroundColor(mContext.getResources().getColor(R.color.bgColor_divier));
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) mContext.getResources().getDimension(R.dimen.size_divier), LinearLayout.LayoutParams.MATCH_PARENT);
-                loAlertButtons.addView(divier, params);
+                View split = new View(mContext);
+                split.setBackgroundColor(mContext.getResources().getColor(R.color.bgColor_divier));
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) mContext.getResources().getDimension(R.dimen.size_divier),LinearLayout.LayoutParams.MATCH_PARENT);
+                loAlertButtons.addView(split, params);
             }
             View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_alertbutton, null);
             TextView tvAlert = itemView.findViewById(R.id.tvAlert);
@@ -138,23 +143,19 @@ public class AlertView {
             //设置点击效果
             String data = mDestructive.get(i);
             tvAlert.setText(data);
-//
-//            //取消按钮的样式
-//            if (data == cancel) {
-//                tvAlert.setTypeface(Typeface.DEFAULT_BOLD);
-//                tvAlert.setTextColor(context.getResources().getColor(R.color.textColor_alert_button_cancel));
-//                tvAlert.setOnClickListener(new OnTextClickListener(CANCELPOSITION));
-//                position = position - 1;
-//            }
-//            //高亮按钮的样式
-//            else if (mDestructive != null && mDestructive.contains(data)) {
-//                tvAlert.setTextColor(context.getResources().getColor(R.color.textColor_alert_button_destructive));
-//            }
-//
-//            tvAlert.setOnClickListener(new OnTextClickListener(position));
-//            position++;
-//            loAlertButtons.addView(itemView, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
-//                    LinearLayout.LayoutParams.WRAP_CONTENT, 1));
+
+            if (mDestructive.size() == 1){
+                tvAlert.setTextColor(Color.RED);
+            }
+            tvAlert.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
+
+            loAlertButtons.addView(itemView, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT, 1));
         }
 
 

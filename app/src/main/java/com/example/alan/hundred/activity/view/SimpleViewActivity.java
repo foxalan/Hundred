@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * Function :
- * Author : Alan
+ * @Author : Alan
  * Modify Date : 15/9/17
  * Issue : TODO
  * Whether solve :
@@ -57,7 +57,7 @@ public class SimpleViewActivity extends BaseActivity {
         listSource = new ListSource(this);
         viewInfoList = listSource.getViewInfoList();
 
-        adapter = new ViewsAdapter(this,viewInfoList,R.layout.grid_view_item);
+        adapter = new ViewsAdapter(this, viewInfoList, R.layout.grid_view_item);
     }
 
     @Override
@@ -67,33 +67,32 @@ public class SimpleViewActivity extends BaseActivity {
         lv_simple_view.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
-                        startActivity(new Intent(SimpleViewActivity.this,TextActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, TextActivity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(SimpleViewActivity.this,EditActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, EditActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(SimpleViewActivity.this,ButtonActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, ButtonActivity.class));
                         break;
                     case 3:
-                        startActivity(new Intent(SimpleViewActivity.this,AdapterActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, AdapterActivity.class));
                         break;
                     case 4:
-                        startActivity(new Intent(SimpleViewActivity.this,PageActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, PageActivity.class));
                         break;
                     case 5:
-                        startActivity(new Intent(SimpleViewActivity.this,ProgressActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, ProgressActivity.class));
                         break;
                     case 6:
-                        startActivity(new Intent(SimpleViewActivity.this,SwitcherActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, ToastActivity.class));
                         break;
                     case 7:
-                        startActivity(new Intent(SimpleViewActivity.this,ToastActivity.class));
+                        startActivity(new Intent(SimpleViewActivity.this, DialogActivity.class));
                         break;
-                    case 8:
-                        startActivity(new Intent(SimpleViewActivity.this,DialogActivity.class));
+                    default:
                         break;
 
                 }
@@ -104,7 +103,7 @@ public class SimpleViewActivity extends BaseActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (item.getItemId() == android.R.id.home){
+        if (item.getItemId() == android.R.id.home) {
             finish();
         }
 
