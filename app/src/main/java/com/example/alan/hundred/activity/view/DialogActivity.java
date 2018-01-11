@@ -11,8 +11,10 @@ import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
 import com.example.alan.hundred.alert.AlertType;
 import com.example.alan.hundred.alert.AlertView;
+import com.example.alan.hundred.alert.IAlertCallBack;
 import com.example.alan.hundred.view.CustomDialog;
 import com.example.alan.hundred.view.DialogView;
+import com.example.alan.hundred.view.MyToast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -93,11 +95,23 @@ public class DialogActivity extends BaseHomeActivity {
                         .setContext(DialogActivity.this)
                         .setDestructive(mDestructive)
                         .setDialogType(mType)
-                        .bulid()
+                        .setAlertOnClickLister(new IAlertCallBack() {
+                            @Override
+                            public void onConfirmClick() {
+                                MyToast.showMessage("点击了确定");
+                            }
+
+                            @Override
+                            public void onCancelClick() {
+                                MyToast.showMessage("点击了取消");
+                            }
+                        })
+                        .build()
                         .show();
                 break;
             default:
                 break;
         }
     }
+
 }

@@ -20,6 +20,7 @@ public class AlertViewBuilder {
     private List<String> mDestructive;
     private AlertType mType;
     private Context mContext;
+    private IAlertCallBack iAlertCallBack;
 
     public AlertViewBuilder setTitle(String title) {
         this.mTitle = title;
@@ -46,8 +47,13 @@ public class AlertViewBuilder {
         return this;
     }
 
-    public AlertView bulid() {
-        return new AlertView(mTitle, mContent, mDestructive, mType, mContext);
+    public AlertViewBuilder setAlertOnClickLister(IAlertCallBack iAlertCallBack){
+        this.iAlertCallBack = iAlertCallBack;
+        return this;
+    }
+
+    public AlertView build() {
+        return new AlertView(mTitle, mContent, mDestructive, mType, mContext,iAlertCallBack);
     }
 
 

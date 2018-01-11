@@ -35,6 +35,7 @@ public class AlertView {
     private AlertType mType;
     private Context mContext;
     private LayoutInflater layoutInflater;
+    private IAlertCallBack iAlertCallBack;
 
     /**
      * activity的根View
@@ -55,12 +56,13 @@ public class AlertView {
     );
 
 
-    public AlertView(String mTitle, String mContent, List<String> mDestructive, AlertType mType, Context mContext) {
+    public AlertView(String mTitle, String mContent, List<String> mDestructive, AlertType mType, Context mContext, IAlertCallBack iAlertCallBack) {
         this.mTitle = mTitle;
         this.mContent = mContent;
         this.mDestructive = mDestructive;
         this.mType = mType;
         this.mContext = mContext;
+        this.iAlertCallBack = iAlertCallBack;
         layoutInflater = LayoutInflater.from(mContext);
         initView();
     }
@@ -96,7 +98,7 @@ public class AlertView {
             case NORMAL:
                 params.gravity = Gravity.CENTER;
                 margin_alert_left_right = mContext.getResources().getDimensionPixelSize(R.dimen.margin_alert_left_right);
-                params.setMargins(margin_alert_left_right,0, margin_alert_left_right,0);
+                params.setMargins(margin_alert_left_right, 0, margin_alert_left_right, 0);
                 contentContainer.setLayoutParams(params);
                 initAlertViews(layoutInflater);
                 break;
@@ -118,20 +120,20 @@ public class AlertView {
 
 
         for (int i = 0; i < mDestructive.size(); i++) {
-            Log.e(TAG, "initAlertViews: " );
+            Log.e(TAG, "initAlertViews: ");
             //如果不是第一个按钮
             if (i != 0) {
                 //添加上按钮之间的分割线
                 View split = new View(mContext);
                 split.setBackgroundColor(mContext.getResources().getColor(R.color.bgColor_divier));
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) mContext.getResources().getDimension(R.dimen.size_divier),LinearLayout.LayoutParams.MATCH_PARENT);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams((int) mContext.getResources().getDimension(R.dimen.size_divier), LinearLayout.LayoutParams.MATCH_PARENT);
                 loAlertButtons.addView(split, params);
             }
             View itemView = LayoutInflater.from(mContext).inflate(R.layout.item_alertbutton, null);
             TextView tvAlert = itemView.findViewById(R.id.tvAlert);
             tvAlert.setClickable(true);
 
-           if (mDestructive.size() == 1) {
+            if (mDestructive.size() == 1) {
                 tvAlert.setBackgroundResource(R.drawable.bg_alertbutton_bottom);
             } else if (i == 0) {
                 //设置最左边的按钮效果
@@ -144,13 +146,26 @@ public class AlertView {
             String data = mDestructive.get(i);
             tvAlert.setText(data);
 
-            if (mDestructive.size() == 1){
+            if (mDestructive.size() == 1) {
                 tvAlert.setTextColor(Color.RED);
+            } else {
+                if (i == 1) {
+                    tvAlert.setTextColor(Color.RED);
+                }
             }
+
+            final int position = i;
+
             tvAlert.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    if (position == 0) {
 
+                        iAlertCallBack.onCancelClick();
+                    } else {
+                        iAlertCallBack.onConfirmClick();
+                    }
+                    dismiss();
                 }
             });
 
@@ -187,6 +202,43 @@ public class AlertView {
     private void onAttached(View view) {
         decorView.addView(view);
 //        contentContainer.startAnimation(inAnim);
+    }
+
+    public void dismiss() {
+        decorView.removeView(rootView);
+//        if (isDismissing) {
+//            return;
+//        }
+//
+//        //消失动画
+//        outAnim.setAnimationListener(new Animation.AnimationListener() {
+//            @Override
+//            public void onAnimationStart(Animation animation) {
+//
+//            }
+//
+//            @Override
+//            public void onAnimationEnd(Animation animation) {
+//                decorView.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        //从activity根视图移除
+//                        decorView.removeView(rootView);
+//                        isDismissing = false;
+//                        if (onDismissListener != null) {
+//                            onDismissListener.onDismiss(AlertView.this);
+//                        }
+//                    }
+//                });
+//            }
+//
+//            @Override
+//            public void onAnimationRepeat(Animation animation) {
+//
+//            }
+//        });
+//        contentContainer.startAnimation(outAnim);
+//        isDismissing = true;
     }
 
 
