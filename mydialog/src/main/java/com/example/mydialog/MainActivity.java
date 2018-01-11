@@ -19,21 +19,23 @@ public class MainActivity extends AppCompatActivity implements OnItemClickListen
         setContentView(R.layout.activity_main);
     }
 
-    public void onClick(View view){
-        switch (view.getId()){
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.bt_custom_dialog:
                 title = "S7";
                 content = "        字字八划,年年八强,明凯一定会证明谁是世界第一打野";
-                new AlertView(this,this,title,content).setCancelable(true).show();
+                new AlertView(this, this, title, content).setCancelable(true).show();
                 break;
             case R.id.bt_scroller:
                 startActivity(new Intent(MainActivity.this, ScrollerActivity.class));
+                break;
+            default:
                 break;
         }
     }
 
     @Override
     public void onItemClick(Object o, int position) {
-        Toast.makeText(this,"ssssss",Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "ssssss", Toast.LENGTH_LONG).show();
     }
 }

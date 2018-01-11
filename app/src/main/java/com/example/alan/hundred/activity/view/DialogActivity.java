@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
-import com.example.alan.hundred.util.L;
 import com.example.alan.hundred.view.CustomDialog;
 import com.example.alan.hundred.view.DialogView;
 
@@ -29,7 +28,7 @@ import com.example.alan.hundred.view.DialogView;
 
 public class DialogActivity extends BaseHomeActivity {
 
-    private ViewGroup rootView ;
+    private ViewGroup rootView;
     private LayoutInflater layoutInflater;
 
     private View view_header;
@@ -54,8 +53,8 @@ public class DialogActivity extends BaseHomeActivity {
         CustomDialog.createGirlDialog(this);
         layoutInflater = LayoutInflater.from(this);
 
-        rootView = (ViewGroup) getWindow().getDecorView().findViewById(android.R.id.content);
-        view_header = layoutInflater.inflate(R.layout.layout_header,rootView,false);
+        rootView = getWindow().getDecorView().findViewById(android.R.id.content);
+        view_header = layoutInflater.inflate(R.layout.layout_header, rootView, false);
 
 
     }
@@ -74,6 +73,8 @@ public class DialogActivity extends BaseHomeActivity {
         switch (view.getId()) {
             case R.id.bt_dialog_simple:
                 dialogView.show();
+                break;
+            default:
                 break;
         }
     }
