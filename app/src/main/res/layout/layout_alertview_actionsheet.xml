@@ -38,16 +38,16 @@
             android:scrollbars="none"/>
     </LinearLayout>
 
-    <!--<TextView-->
-        <!--android:id="@+id/tvAlertCancel"-->
-        <!--android:visibility="gone"-->
-        <!--android:layout_marginTop="@dimen/margin_actionsheet_left_right"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="@dimen/height_alert_button"-->
-        <!--android:gravity="center"-->
-        <!--android:clickable="true"-->
-        <!--android:background="@drawable/bg_actionsheet_cancel"-->
-        <!--android:textColor="@color/textColor_alert_button_cancel"-->
-        <!--android:textStyle="bold"-->
-        <!--android:textSize="@dimen/textSize_alert_button" />-->
+    <TextView
+        android:id="@+id/tvAlertCancel"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_actionsheet_left_right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_alert_button"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="@drawable/bg_actionsheet_cancel"
+        android:textColor="@color/textColor_alert_button_cancel"
+        android:textStyle="bold"
+        android:textSize="@dimen/textSize_alert_button" />
 </LinearLayout>

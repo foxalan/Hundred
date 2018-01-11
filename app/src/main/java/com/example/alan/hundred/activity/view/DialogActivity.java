@@ -47,8 +47,7 @@ public class DialogActivity extends BaseHomeActivity {
     private List<String> mDestructive = new ArrayList<>();
     private AlertType mType;
     private Context mContext;
-
-
+    private List<String> mDataList = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -80,6 +79,8 @@ public class DialogActivity extends BaseHomeActivity {
         mDestructive.add("取消");
         mDestructive.add("确定");
 
+        mDataList.add("从相册选择");
+        mDataList.add("拍照");
     }
 
     @Override
@@ -108,6 +109,16 @@ public class DialogActivity extends BaseHomeActivity {
                         })
                         .build()
                         .show();
+                break;
+            case R.id.bt_dialog_simple_bottom:
+                AlertView.builder()
+                        .setTitle("拍照")
+                        .setDataList(mDataList)
+                        .setContext(DialogActivity.this)
+                        .setDialogType(AlertType.BOTTOM)
+                        .build()
+                        .show();
+
                 break;
             default:
                 break;

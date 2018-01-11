@@ -15,12 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/bt_dialog_simple_confirm"
+        android:id="@+id/bt_dialog_simple_bottom"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:onClick="onClick"
         android:textSize="@dimen/text_size_mid"
-        android:text="只有确定的Dialog"
+        android:text="最下面的Dialog"
         android:background="@drawable/bg_button"
         android:layout_margin="@dimen/margin_normal"
         android:layout_width="match_parent"
