@@ -7,8 +7,9 @@
     <include layout="@layout/layout_toolbar"/>
 
     <GridView
+        android:layout_margin="10dp"
         android:id="@+id/gv_home"
-        android:numColumns="3"
+        android:numColumns="2"
         android:horizontalSpacing="20dp"
         android:verticalSpacing="20dp"
         android:layout_width="match_parent"
