@@ -1,1 +1,1 @@
-include ':app', ':adanvace'
+include ':app', ':adanvace', ':point'
