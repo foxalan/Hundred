@@ -21,8 +21,10 @@ import com.example.adanvace.activity.viewgroup.AdapterActivity;
 import com.example.adanvace.activity.viewgroup.FlowViewGroupActivity;
 import com.example.adanvace.activity.viewgroup.HorizontalScrollViewActivity;
 import com.example.adanvace.activity.viewgroup.JigsawActivity;
+
 import com.example.adanvace.activity.viewgroup.RecyclerActivity;
 import com.example.adanvace.activity.viewgroup.ViewGroupActivity;
+import com.example.adanvace.recycler.RecyclerViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -88,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.bt_jigsaw:
                 startActivity(new Intent(MainActivity.this, JigsawActivity.class));
+                break;
+            case R.id.bt_recycler:
+                startActivity(new Intent(MainActivity.this,RecyclerViewActivity.class));
+                break;
+            default:
                 break;
 
         }

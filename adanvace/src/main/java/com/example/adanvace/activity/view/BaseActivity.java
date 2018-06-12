@@ -10,6 +10,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getSupportActionBar()!=null){
+            getSupportActionBar().hide();
+        }
         setContentView(getContentView());
         initView();
         initData();
