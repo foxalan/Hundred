@@ -87,6 +87,8 @@
         <activity android:name=".activity.viewgroup.JigsawActivity"/>
 
         <activity android:name=".recycler.RecyclerViewActivity"/>
+
+        <activity android:name=".recyclerview.RecyclerViewTestActivity"/>
     </application>
 
 </manifest>

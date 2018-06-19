@@ -25,6 +25,7 @@ import com.example.adanvace.activity.viewgroup.JigsawActivity;
 import com.example.adanvace.activity.viewgroup.RecyclerActivity;
 import com.example.adanvace.activity.viewgroup.ViewGroupActivity;
 import com.example.adanvace.recycler.RecyclerViewActivity;
+import com.example.adanvace.recyclerview.RecyclerViewTestActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, JigsawActivity.class));
                 break;
             case R.id.bt_recycler:
-                startActivity(new Intent(MainActivity.this,RecyclerViewActivity.class));
+                startActivity(new Intent(MainActivity.this,RecyclerViewTestActivity.class));
                 break;
             default:
                 break;
