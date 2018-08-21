@@ -1,1 +1,1 @@
-include ':app', ':adanvace', ':point'
+include ':app', ':adanvace', ':point', ':JPushExample(974451)'

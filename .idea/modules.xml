@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Hundred.iml" filepath="$PROJECT_DIR$/Hundred.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JPushExample(974451)/JPushExample(974451).iml" filepath="$PROJECT_DIR$/JPushExample(974451)/JPushExample(974451).iml" />
       <module fileurl="file://$PROJECT_DIR$/adanvace/adanvace.iml" filepath="$PROJECT_DIR$/adanvace/adanvace.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/point/point.iml" filepath="$PROJECT_DIR$/point/point.iml" />

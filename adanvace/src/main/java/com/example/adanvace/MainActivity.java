@@ -21,8 +21,11 @@ import com.example.adanvace.activity.viewgroup.AdapterActivity;
 import com.example.adanvace.activity.viewgroup.FlowViewGroupActivity;
 import com.example.adanvace.activity.viewgroup.HorizontalScrollViewActivity;
 import com.example.adanvace.activity.viewgroup.JigsawActivity;
+
 import com.example.adanvace.activity.viewgroup.RecyclerActivity;
 import com.example.adanvace.activity.viewgroup.ViewGroupActivity;
+import com.example.adanvace.recycler.RecyclerViewActivity;
+import com.example.adanvace.recyclerview.RecyclerViewTestActivity;
 
 /**
  * @author alan
@@ -94,8 +97,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bt_jigsaw:
                 startActivity(new Intent(MainActivity.this, JigsawActivity.class));
                 break;
+<<<<<<< HEAD
                 default:
                     break;
+=======
+            case R.id.bt_recycler:
+                startActivity(new Intent(MainActivity.this,RecyclerViewTestActivity.class));
+                break;
+            default:
+                break;
+>>>>>>> 6bcc4b4435672825b4edd92aebd554653ff6032e
 
         }
     }

@@ -47,9 +47,9 @@ public abstract class CustomRecyclerViewAdapter<T> extends RecyclerView.Adapter<
         View view = inflater.inflate(resID, parent, false);
         viewHolder = new CustomRecyclerViewHolder(view);
 
-        for (int i = 0; i < ids.length; i++) {
-            viewHolder.getView(ids[i]);
-        }
+//        for (int i = 0; i < ids.length; i++) {
+//            viewHolder.getView(ids[i]);
+//        }
 
         return viewHolder;
     }
