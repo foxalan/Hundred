@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.alan.hundred.Config.Config;
+import com.example.alan.hundred.config.Config;
 import com.example.alan.hundred.R;
 import com.example.alan.hundred.activity.BaseHomeActivity;
 import com.example.alan.hundred.util.L;

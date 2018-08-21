@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.point.R;
 import com.example.point.util.L;
 
 /**
@@ -30,8 +31,13 @@ public class PeriodFragment extends BaseFragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-
         L.d("fragment onAttach");
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        L.d("fragment onCreate");
     }
 
     @Nullable
@@ -39,8 +45,9 @@ public class PeriodFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         L.d("fragment onCreateView");
+        View view = inflater.inflate(R.layout.module_fragment_period, container, false);
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 
     @Override
@@ -48,6 +55,25 @@ public class PeriodFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
         L.d("fragment onViewCreated");
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        L.d("fragment onActivityCreated");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        L.d("fragment onStart");
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        L.d("fragment onResume");
     }
 
     @Override
@@ -65,6 +91,12 @@ public class PeriodFragment extends BaseFragment {
     }
 
     @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        L.d("fragment onDestroyView");
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
 
@@ -77,4 +109,6 @@ public class PeriodFragment extends BaseFragment {
 
         L.d("fragment onDetach");
     }
+
+
 }

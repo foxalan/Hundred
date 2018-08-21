@@ -24,6 +24,11 @@ import com.example.adanvace.activity.viewgroup.JigsawActivity;
 import com.example.adanvace.activity.viewgroup.RecyclerActivity;
 import com.example.adanvace.activity.viewgroup.ViewGroupActivity;
 
+/**
+ * @author alan
+ *
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -89,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bt_jigsaw:
                 startActivity(new Intent(MainActivity.this, JigsawActivity.class));
                 break;
+                default:
+                    break;
 
         }
     }

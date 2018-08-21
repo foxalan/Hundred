@@ -1,12 +1,21 @@
 package com.example.point;
 
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 
 import com.example.point.fragment.PeriodFragment;
 import com.example.point.util.L;
 
 public class MainActivity extends AppCompatActivity {
+    private Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +60,16 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         L.d("activity onDestroy");
+    }
+
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
     }
 }

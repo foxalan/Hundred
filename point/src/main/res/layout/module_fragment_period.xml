@@ -3,6 +3,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    
+    <TextView
+        android:text="PERIOD"
+        android:textSize="40sp"
+        android:textColor="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

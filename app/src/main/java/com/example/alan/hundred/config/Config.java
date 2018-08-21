@@ -1,4 +1,4 @@
-package com.example.alan.hundred.Config;
+package com.example.alan.hundred.config;
 
 /**
  * Function :
@@ -9,5 +9,5 @@ package com.example.alan.hundred.Config;
  */
 
 public class Config {
-    public static final String APP_USE_COUNT = "app_use_conut";
+    public static final String APP_USE_COUNT = "app_use_count";
 }

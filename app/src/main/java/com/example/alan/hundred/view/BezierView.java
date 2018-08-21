@@ -47,7 +47,7 @@ public class BezierView extends View {
     private boolean isDraw = false;
 
     private List<Point> pointList = new ArrayList<>();
-    private Handler mHandler = new Handler() {
+    private  Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);

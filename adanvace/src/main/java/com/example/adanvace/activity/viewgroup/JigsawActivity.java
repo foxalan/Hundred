@@ -2,13 +2,14 @@ package com.example.adanvace.activity.viewgroup;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.MotionEvent;
 
 import com.example.adanvace.R;
 import com.example.adanvace.activity.view.BaseActivity;
 
 /**
  * Function :
- * Author : Alan
+ * @Author : Alan
  * Modify Date : 24/8/17
  * Issue : TODO
  * Whether solve :
@@ -39,5 +40,17 @@ public class JigsawActivity extends BaseActivity {
     @Override
     public void initEvent() {
 
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
+    
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
     }
 }
