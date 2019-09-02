@@ -33,4 +33,6 @@
     <color name="myBarColor">#0682AF</color>
 
     <color name="login_text_color">#060707</color>
+
+    <color name="windowBackgroundColor">#f8f8f8</color>
 </resources>

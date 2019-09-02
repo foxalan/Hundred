@@ -13,6 +13,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (getSupportActionBar()!=null){
             getSupportActionBar().hide();
         }
+
         setContentView(getContentView());
         initView();
         initData();
@@ -26,6 +27,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     public abstract void initData();
 
     public abstract void initEvent();
+
+
+    protected void setStatuBarColor(int statuBarColor,int ){
+
+    }
 
 
 }
