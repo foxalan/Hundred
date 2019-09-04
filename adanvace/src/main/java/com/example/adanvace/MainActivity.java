@@ -1,14 +1,17 @@
 package com.example.adanvace;
 
+import android.Manifest;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 
 import com.example.adanvace.activity.animation.AnimationActivity;
 import com.example.adanvace.activity.animation.AnimatorActivity;
+import com.example.adanvace.activity.permission.JumpPermissionManagement;
+import com.example.adanvace.activity.permission.PermissionCallback;
+import com.example.adanvace.activity.permission.RequestPermission;
 import com.example.adanvace.activity.view.ContactActivity;
 import com.example.adanvace.activity.view.CustomActivity;
+import com.example.adanvace.activity.view.LatteActivity;
 import com.example.adanvace.activity.view.LotteryActivity;
 import com.example.adanvace.activity.view.RadiusActivity;
 import com.example.adanvace.activity.view.RefreshListViewActivity;
@@ -24,19 +27,36 @@ import com.example.adanvace.activity.viewgroup.JigsawActivity;
 
 import com.example.adanvace.activity.viewgroup.RecyclerActivity;
 import com.example.adanvace.activity.viewgroup.ViewGroupActivity;
-import com.example.adanvace.recycler.RecyclerViewActivity;
 import com.example.adanvace.recyclerview.RecyclerViewTestActivity;
+import com.example.adanvace.util.L;
 
 /**
  * @author alan
  */
+@RequestPermission(value = {Manifest.permission.READ_PHONE_STATE,Manifest.permission.CALL_PHONE})
+public class MainActivity extends LatteActivity implements PermissionCallback {
 
-public class MainActivity extends AppCompatActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int getContentView() {
+        setPermissionCallback(this);
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void initEvent() {
+
     }
 
 
@@ -106,4 +126,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onPermissionReceive() {
+        L.e("ON RECEIVE");
+    }
+
+    @Override
+    public void onPermissionReject(String permissions) {
+        L.e("reject "+permissions);
+    }
+
+    @Override
+    public void onPermissionRemind() {
+        JumpPermissionManagement.GoToSetting(this);
+        L.e("on remind");
+    }
 }

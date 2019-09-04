@@ -17,5 +17,7 @@ public class L {
         Log.d(name,str);
     }
 
-
+    public static void e(String str){
+        Log.e(name,str);
+    }
 }
