@@ -15,15 +15,17 @@ import com.example.adanvace.viewgroup.VerticalLinearLayout;
  * Input Parameter &
  */
 
-public class VerticalActivity extends Activity{
+public class VerticalActivity extends LatteActivity{
 
     private VerticalLinearLayout verticalLinearLayout;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verterical);
+    public int getContentView() {
+        return R.layout.activity_verterical;
+    }
 
+    @Override
+    public void initView() {
         verticalLinearLayout = (VerticalLinearLayout) findViewById(R.id.vl_layout);
 
         verticalLinearLayout.setOnPageChangeListener(new VerticalLinearLayout.OnPageChangeListener() {
@@ -33,6 +35,15 @@ public class VerticalActivity extends Activity{
             }
         });
 
+    }
+
+    @Override
+    public void initData() {
+
+    }
+
+    @Override
+    public void initEvent() {
 
     }
 }

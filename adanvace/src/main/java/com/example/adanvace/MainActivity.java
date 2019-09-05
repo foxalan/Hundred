@@ -138,7 +138,7 @@ public class MainActivity extends LatteActivity implements PermissionCallback {
 
     @Override
     public void onPermissionRemind() {
-        JumpPermissionManagement.GoToSetting(this);
+//        JumpPermissionManagement.GoToSetting(this);
         L.e("on remind");
     }
 }
