@@ -5,6 +5,9 @@
     android:orientation="vertical">
 
     <com.example.adanvace.activity.viewpager.sourcecode.ViewPager
+        android:layout_margin="50dp"
+        android:clipChildren="false"
+        android:layerType="software"
         android:id="@+id/vp_test_01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
