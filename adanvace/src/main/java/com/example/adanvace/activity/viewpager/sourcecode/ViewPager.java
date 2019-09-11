@@ -89,16 +89,6 @@ public class ViewPager extends ViewGroup {
         boolean scrolling;
         float widthFactor;
         float offset;
-
-        @Override
-        public String toString() {
-            return "ItemInfo{" +
-                    ", position=" + position +
-                    ", scrolling=" + scrolling +
-                    ", widthFactor=" + widthFactor +
-                    ", offset=" + offset +
-                    '}';
-        }
     }
 
     private static final Comparator<ItemInfo> COMPARATOR = new Comparator<ItemInfo>(){
@@ -181,6 +171,9 @@ public class ViewPager extends ViewGroup {
     private int mFlingDistance;
     private int mCloseEnough;
 
+    // If the pager is at least this close to its final position, complete the scroll
+    // on touch down and let the user interact with the content inside instead of
+    // "catching" the flinging pager.
     private static final int CLOSE_ENOUGH = 2; // dp
 
     private boolean mFakeDragging;
@@ -1025,7 +1018,6 @@ public class ViewPager extends ViewGroup {
     }
 
     void populate(int newCurrentItem) {
-        Log.e("populate","newCurrentItem:"+newCurrentItem);
         ItemInfo oldCurInfo = null;
         if (mCurItem != newCurrentItem) {
             oldCurInfo = infoForPosition(mCurItem);
@@ -1037,23 +1029,28 @@ public class ViewPager extends ViewGroup {
             return;
         }
 
+        // Bail now if we are waiting to populate.  This is to hold off
+        // on creating views from the time the user releases their finger to
+        // fling to a new position until we have finished the scroll to
+        // that position, avoiding glitches from happening at that point.
         if (mPopulatePending) {
             if (DEBUG) Log.i(TAG, "populate is pending, skipping for now...");
             sortChildDrawingOrder();
             return;
         }
 
+        // Also, don't populate until we are attached to a window.  This is to
+        // avoid trying to populate before we have restored our view hierarchy
+        // state and conflicting with what is restored.
         if (getWindowToken() == null) {
             return;
         }
 
         mAdapter.startUpdate(this);
-        //默认加载下一页
-        final int pageLimit = mOffscreenPageLimit;
-        //开始页
+
+        final int pageLimit = mOffscreenPageLimit; //默认加载下一页
         final int startPos = Math.max(0, mCurItem - pageLimit);
         final int N = mAdapter.getCount();
-        //结束页
         final int endPos = Math.min(N - 1, mCurItem + pageLimit);
 
         if (N != mExpectedAdapterCount) {
@@ -1071,6 +1068,7 @@ public class ViewPager extends ViewGroup {
                     + " Problematic adapter: " + mAdapter.getClass());
         }
 
+        // Locate the currently focused item or add it if needed.
         int curIndex = -1;
         ItemInfo curItem = null;
         for (curIndex = 0; curIndex < mItems.size(); curIndex++) {
@@ -1080,22 +1078,19 @@ public class ViewPager extends ViewGroup {
                 break;
             }
         }
-        //给curItem 赋值
+
         if (curItem == null && N > 0) {
             curItem = addNewItem(mCurItem, curIndex);
         }
-        Log.e("populate","curItem:"+curItem.toString());
+
         // Fill 3x the available width or up to the number of offscreen
         // pages requested to either side, whichever is larger.
         // If we have no current item we have no work to do.
         if (curItem != null) {
             float extraWidthLeft = 0.f;
             int itemIndex = curIndex - 1;
-            //左边的Item
             ItemInfo ii = itemIndex >= 0 ? mItems.get(itemIndex) : null;
-            // 客户端宽度
             final int clientWidth = getClientWidth();
-            //
             final float leftWidthNeeded = clientWidth <= 0 ? 0 :
                     2.f - curItem.widthFactor + (float) getPaddingLeft() / (float) clientWidth;
             for (int pos = mCurItem - 1; pos >= 0; pos--) {
@@ -1158,7 +1153,6 @@ public class ViewPager extends ViewGroup {
                     }
                 }
             }
-
 
             calculatePageOffsets(curItem, curIndex, oldCurInfo);
         }

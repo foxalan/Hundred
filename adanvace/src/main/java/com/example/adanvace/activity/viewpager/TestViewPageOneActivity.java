@@ -12,7 +12,6 @@ import com.example.adanvace.R;
 import com.example.adanvace.activity.view.BaseActivity;
 import com.example.adanvace.activity.viewpager.sourcecode.PagerAdapter;
 import com.example.adanvace.activity.viewpager.sourcecode.ViewPager;
-import com.example.adanvace.activity.viewpager.transformer.CardTransformer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,12 +87,10 @@ public class TestViewPageOneActivity extends BaseActivity {
             }
         };
 
-
     }
 
     @Override
     public void initEvent() {
         vp_test_01.setAdapter(pagerAdapter);
-        vp_test_01.setPageTransformer(true, new CardTransformer());
     }
 }
