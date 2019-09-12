@@ -4,14 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.adanvace.R;
 import com.example.adanvace.activity.view.BaseActivity;
-import com.example.adanvace.activity.viewpager.sourcecode.PagerAdapter;
-import com.example.adanvace.activity.viewpager.sourcecode.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
