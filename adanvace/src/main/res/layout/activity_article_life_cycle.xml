@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatButton
+        android:onClick="normalSkip"
+        android:text="正常跳转"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:onClick="onSaveInstance"
+        android:text="onSaveInstance与onRestoreInstanceState"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:onClick="launchMode"
+        android:text="Activity的LaunchMode"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+</android.support.v7.widget.LinearLayoutCompat>

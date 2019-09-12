@@ -15,6 +15,13 @@
         tools:context="com.example.adanvace.MainActivity">
 
         <Button
+            android:onClick="onClick"
+            android:text="android 开发艺术探索"
+            android:id="@+id/bt_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
             android:id="@+id/bt_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

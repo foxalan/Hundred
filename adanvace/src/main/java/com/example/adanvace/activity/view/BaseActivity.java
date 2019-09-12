@@ -49,9 +49,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public abstract void initView();
 
-    public abstract void initData();
+    public void initData(){};
 
-    public abstract void initEvent();
+    public void initEvent(){};
 
     protected void setStatusBarColor(int statusBarColor, int textColor) {
         //判断版本

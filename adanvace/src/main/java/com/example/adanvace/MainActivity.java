@@ -27,6 +27,7 @@ import com.example.adanvace.activity.viewgroup.JigsawActivity;
 
 import com.example.adanvace.activity.viewgroup.RecyclerActivity;
 import com.example.adanvace.activity.viewgroup.ViewGroupActivity;
+import com.example.adanvace.article.activity.ArticleActivity;
 import com.example.adanvace.recyclerview.RecyclerViewTestActivity;
 import com.example.adanvace.util.L;
 
@@ -49,19 +50,11 @@ public class MainActivity extends LatteActivity implements PermissionCallback {
 
     }
 
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initEvent() {
-
-    }
-
-
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.bt_article:
+                startActivity(new Intent(MainActivity.this, ArticleActivity.class));
+                break;
             case R.id.bt_vertical:
                 startActivity(new Intent(MainActivity.this, VerticalActivity.class));
                 break;
