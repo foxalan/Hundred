@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="VIEW"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:hint="left"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/et_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:hint="top"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/et_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:hint="right"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/et_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:hint="bottom"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:focusable="true"
+            android:padding="5dp"
+            android:text="确定" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:minWidth="30dp"
+            android:id="@+id/et_scroll_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:hint="X"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <EditText
+            android:minWidth="30dp"
+            android:id="@+id/et_scroll_y"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:hint="Y"
+            android:inputType="number"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/tv_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_et_search"
+            android:focusable="true"
+            android:padding="5dp"
+            android:text="滑动" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_position"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@color/yellow" />
+
+</LinearLayout>

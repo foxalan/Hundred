@@ -15,5 +15,14 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints" />
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_view"
+        android:text="View的位置和滑动参数"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
 
 </android.support.v7.widget.LinearLayoutCompat>

@@ -102,6 +102,7 @@
         <activity android:name=".article.activity.lifecycle.LifeCycleNormalActivity" />
 
         <activity android:name=".article.activity.ArticleActivity" />
+        <activity android:name=".article.activity.view.ViewPositionActivity" />
     </application>
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

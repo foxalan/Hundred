@@ -68,13 +68,4 @@ public class LifeCycleNormalActivity extends BaseActivity {
 
     }
 
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void initEvent() {
-
-    }
 }
