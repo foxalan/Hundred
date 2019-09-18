@@ -17,6 +17,19 @@
             android:text="VIEW"
             android:textColor="@color/white"
             android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_distribution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:text="事件分发"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout

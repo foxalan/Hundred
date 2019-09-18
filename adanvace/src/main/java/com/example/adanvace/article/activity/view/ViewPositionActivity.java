@@ -1,6 +1,6 @@
 package com.example.adanvace.article.activity.view;
 
-import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -46,7 +46,13 @@ public class ViewPositionActivity extends BaseActivity implements View.OnClickLi
         mTvScroll = (TextView) findViewById(R.id.tv_scroll);
 
         view = findViewById(R.id.view_position);
-//        view.setFocusable(true);
+
+        findViewById(R.id.tv_distribution).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ViewPositionActivity.this,ViewDistributionActivity.class));
+            }
+        });
 
         mTvPosition.setOnClickListener(this);
         mTvScroll.setOnClickListener(this);

@@ -103,6 +103,7 @@
 
         <activity android:name=".article.activity.ArticleActivity" />
         <activity android:name=".article.activity.view.ViewPositionActivity" />
+        <activity android:name=".article.activity.view.ViewDistributionActivity" />
     </application>
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
