@@ -94,7 +94,6 @@
 
         <!--开发艺术探索-->
         <!--系统配置中有很多内容，如果当某项内容发生改变后，我们不想系统重新创建， 就可以给configChangs属性加上orientation这个值-->
-
         <activity
             android:name=".article.activity.lifecycle.LifeCycleActivity"
             android:configChanges="orientation" />
@@ -102,8 +101,14 @@
         <activity android:name=".article.activity.lifecycle.LifeCycleNormalActivity" />
 
         <activity android:name=".article.activity.ArticleActivity" />
+
         <activity android:name=".article.activity.view.ViewPositionActivity" />
+
         <activity android:name=".article.activity.view.ViewDistributionActivity" />
+
+        <activity android:name=".article.activity.anim.AnimActivity" />
+        <activity android:name=".article.activity.anim.vector.VectorActivity" />
+
     </application>
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />

@@ -23,11 +23,12 @@ android {
 
     defaultConfig {
         applicationId "com.example.adanvace"
-        minSdkVersion 23
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
-
+        //        使用vector
+        vectorDrawables.useSupportLibrary = true
         ndk {
             abiFilters "armeabi"
         }

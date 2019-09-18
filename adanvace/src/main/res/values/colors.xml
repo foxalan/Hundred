@@ -27,12 +27,15 @@
     <color name="colorWare">#DDDDDD</color>
     <color name="colorTextColor">#9C9289</color>
 
-
     <color name="color_list_setting_bg">#00ffff</color>
-
     <color name="myBarColor">#0682AF</color>
-
     <color name="login_text_color">#060707</color>
-
     <color name="windowBackgroundColor">#f8f8f8</color>
+
+    <!-- 手势密码-->
+    <color name="lockpattern_point_line">#FFFF8D00</color>
+    <color name="lockpattern_point_selected_color_inner">#FFFF8D00</color>
+    <color name="lockpattern_point_selected_color_outer">#33FF8D00</color>
+    <color name="lockpattern_point_normal_color">#E1E4EA</color>
+
 </resources>
