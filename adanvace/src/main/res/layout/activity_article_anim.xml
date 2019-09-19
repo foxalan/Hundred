@@ -30,4 +30,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <Button
+        android:id="@+id/bt_anim_bezier"
+        android:onClick="onClick"
+        android:text="Bezier动画"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_anim_demo"
+        android:onClick="onClick"
+        android:text="动画DEMO"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

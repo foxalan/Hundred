@@ -30,6 +30,7 @@ public class VectorActivity extends BaseActivity {
     public void anim(View view) {
         ImageView imageView = (ImageView) view;
         Drawable drawable = imageView.getDrawable();
+
         if (drawable instanceof Animatable) {
             ((Animatable) drawable).start();
         }

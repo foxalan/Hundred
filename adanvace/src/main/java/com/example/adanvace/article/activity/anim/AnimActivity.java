@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.example.adanvace.R;
 import com.example.adanvace.activity.view.BaseActivity;
-import com.example.adanvace.activity.view.VerticalActivity;
+import com.example.adanvace.article.activity.anim.bezier.BezierActivity;
 import com.example.adanvace.article.activity.anim.vector.VectorActivity;
 
 /**
@@ -29,6 +29,9 @@ public class AnimActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.bt_anim_vector:
                 startActivity(new Intent(AnimActivity.this, VectorActivity.class));
+                break;
+            case R.id.bt_anim_bezier:
+                startActivity(new Intent(AnimActivity.this, BezierActivity.class));
                 break;
             default:
                 break;

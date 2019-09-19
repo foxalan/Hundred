@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.adanvace.article.activity.anim.bezier.view.SecondBezierView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <com.example.adanvace.article.activity.anim.bezier.view.ThirdBezierView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <com.example.adanvace.article.activity.anim.bezier.view.WaveBezierView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <com.example.adanvace.article.activity.anim.bezier.view.PathMorphingBezierView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <com.example.adanvace.article.activity.anim.bezier.view.PathBezierView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+        <com.example.adanvace.article.activity.anim.bezier.view.DrawPadView
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="250dp" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
