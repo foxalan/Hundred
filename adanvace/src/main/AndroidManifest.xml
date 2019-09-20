@@ -109,6 +109,7 @@
         <activity android:name=".article.activity.anim.AnimActivity" />
         <activity android:name=".article.activity.anim.vector.VectorActivity" />
         <activity android:name=".article.activity.anim.bezier.BezierActivity" />
+        <activity android:name=".article.activity.anim.demo.AnimDemoActivity" />
 
     </application>
 
